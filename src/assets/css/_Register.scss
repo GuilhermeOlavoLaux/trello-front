@@ -1,0 +1,28 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .register-left-content {
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+
+    .about-me {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+        height: 200px;
+        margin-right: 40px;
+      }
+    }
+  }
+}

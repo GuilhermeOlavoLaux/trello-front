@@ -1,0 +1,24 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-container .register-left-content {
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+}
+.register-container .register-left-content p {
+  width: 100%;
+  text-align: center;
+}
+.register-container .register-left-content .about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-container .register-left-content .about-me img {
+  border-radius: 50%;
+  height: 200px;
+  margin-right: 40px;
+}/*# sourceMappingURL=index.css.map */
