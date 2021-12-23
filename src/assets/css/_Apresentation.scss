@@ -1,0 +1,35 @@
+.apresentation-left-content {
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+
+  margin-right: 40px;
+  margin-left: 80px;
+
+  p {
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: $white-text;
+      text-decoration: none;
+    }
+  }
+
+  .about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 150px;
+      margin-right: 40px;
+    }
+  }
+}

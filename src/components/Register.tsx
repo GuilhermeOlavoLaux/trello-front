@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, Fragment } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Apresentation from './Apresentation'
 interface IFields {
   name: string
   password: string
@@ -36,26 +37,9 @@ export default function Register() {
   return (
     <Fragment>
       <div className='register-container'>
-        <div className='register-left-content'>
-          <p>
-            Projeto desenvolvido utilizando JavaScript, React, TypeScript, SCSS, NodeJs, Express e
-            MongoDB.
-          </p>
+        <Apresentation></Apresentation>
 
-          <div className='about-me'>
-            <img
-              src='https://media.discordapp.net/attachments/882783374060695582/923665395615924234/Guilherme.png'
-              alt='Guilherme Laux'
-            />
-
-            <div className='about-me-text'>
-              <h2>Guilherme Laux</h2>
-              <p>Desenvolvedor FullStack</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='form'>
+        <div className='register-right-content'>
           <ToastContainer
             position='top-right'
             autoClose={4000}
@@ -91,7 +75,7 @@ export default function Register() {
               }
             />
 
-            <button>Cadastrar</button>
+            <button className='default-button'>Cadastrar</button>
           </div>
         </div>
       </div>

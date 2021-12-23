@@ -2,23 +2,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #eee;
+  border: 2px solid #7ae30b;
+  background-color: #141314;
+  border-radius: 6px;
+  height: 600px;
 }
-.register-container .register-left-content {
+.register-container .register-right-content {
+  margin-right: 80px;
+}
+.register-container .register-right-content .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-container .register-right-content .form-container button {
+  margin-top: 20px;
+}
+
+.apresentation-left-content {
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: 500px;
+  margin-right: 40px;
+  margin-left: 80px;
 }
-.register-container .register-left-content p {
+.apresentation-left-content p {
   width: 100%;
   text-align: center;
 }
-.register-container .register-left-content .about-me {
+.apresentation-left-content p a {
+  color: #eee;
+  text-decoration: none;
+}
+.apresentation-left-content .about-me {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
-.register-container .register-left-content .about-me img {
+.apresentation-left-content .about-me h3 {
+  font-size: 1.4rem;
+}
+.apresentation-left-content .about-me img {
   border-radius: 50%;
-  height: 200px;
+  height: 150px;
   margin-right: 40px;
+}
+
+.default-button {
+  background-color: red;
 }/*# sourceMappingURL=index.css.map */

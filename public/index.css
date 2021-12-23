@@ -1,9 +1,12 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-.root{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242222;
 }
