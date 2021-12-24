@@ -1,6 +1,11 @@
+.header-header-footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .register {
-  width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

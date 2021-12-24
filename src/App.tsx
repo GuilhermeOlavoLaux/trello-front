@@ -5,9 +5,7 @@ import Register from './components/Register'
 function App() {
   return (
     <>
-      <Header></Header>
       <Register></Register>
-      <Footer></Footer>
     </>
   )
 }
