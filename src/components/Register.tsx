@@ -2,6 +2,8 @@ import { useState, ChangeEvent, Fragment } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
+import Footer from './Footer'
+import Header from './Header'
 interface IFields {
   name: string
   password: string
@@ -36,46 +38,48 @@ export default function Register() {
 
   return (
     <Fragment>
-      <div className='register-container'>
-        <Apresentation></Apresentation>
+      <div className='register'>
+        <div className='register-container'>
+          <Apresentation></Apresentation>
 
-        <div className='register-right-content'>
-          <ToastContainer
-            position='top-right'
-            autoClose={4000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick={true}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-          <ToastContainer />
-
-          <div className='form-container'>
-            <h1>Cadastre-se</h1>
-            <p>Nome</p>
-            <input
-              type='text'
-              value={fields.name}
-              id='nameInput'
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                setFields({ ...fields, name: event.target.value })
-              }
+          <div className='register-right-content'>
+            <ToastContainer
+              position='top-right'
+              autoClose={4000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={true}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
             />
+            <ToastContainer />
 
-            <p>Senha</p>
-            <input
-              type='password'
-              value={fields.password}
-              id='passwordInput'
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                setFields({ ...fields, password: event.target.value })
-              }
-            />
+            <div className='form-container'>
+              <h1>Cadastre-se</h1>
+              <p>Nome</p>
+              <input
+                type='text'
+                value={fields.name}
+                id='nameInput'
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  setFields({ ...fields, name: event.target.value })
+                }
+              />
 
-            <button className='default-button'>Cadastrar</button>
+              <p>Senha</p>
+              <input
+                type='password'
+                value={fields.password}
+                id='passwordInput'
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  setFields({ ...fields, password: event.target.value })
+                }
+              />
+
+              <button className='default-button'>Cadastrar</button>
+            </div>
           </div>
         </div>
       </div>

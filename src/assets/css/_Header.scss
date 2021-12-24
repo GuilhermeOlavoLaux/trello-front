@@ -1,0 +1,24 @@
+.header {
+  background-color: $grey-100;
+  .header-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+      width: 150px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    li {
+      color: $white-text;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+  }
+}
