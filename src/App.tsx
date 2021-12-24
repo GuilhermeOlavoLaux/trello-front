@@ -1,11 +1,9 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Register from './components/Register'
+import AppRoutes from './routes/Routes'
 
 function App() {
   return (
     <>
-      <Register></Register>
+      <AppRoutes></AppRoutes>
     </>
   )
 }

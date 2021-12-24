@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 export default function Apresentation() {
   return (
     <Fragment>
-      <div className='apresentation-left-content'>
+      <div className='apresentation-content'>
         <p>
           Projeto desenvolvido utilizando JavaScript, React, TypeScript, SCSS, NodeJs, Express e
           MongoDB. Para rodar o projeto primeiramente instale as dependências com o comando npm i,

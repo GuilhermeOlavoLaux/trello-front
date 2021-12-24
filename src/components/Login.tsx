@@ -1,12 +1,14 @@
 import { useState, ChangeEvent, Fragment } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { api } from '../api/apiRotes'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
 interface IFields {
-  userName: string
-  password: string
+    userName: string
+    password: string
 }
 
 interface IToastConfig {
@@ -20,11 +22,10 @@ interface IToastConfig {
   progress: any
 }
 
-export default function Register() {
+export default function Login() {
   const [fields, setFields] = useState<IFields>({} as IFields)
 
-
-
+  const navigate = useNavigate()
 
   function getToastConfig(id: string): IToastConfig {
     return {
@@ -39,15 +40,27 @@ export default function Register() {
     }
   }
 
+  async function login() {
+    console.log(fields)
+
+    const userName = fields.userName
+    const password = fields.password
+
+
+    const cepRequest = await api.post('/login', {userName, password})
+
+    console.log(cepRequest)
+  }
+
   return (
     <Fragment>
-      <div className='header-register-footer'>
+      <div className='header-login-footer'>
         <Header></Header>
-        <div className='register'>
-          <div className='register-container'>
+        <div className='login'>
+          <div className='login-container'>
             <Apresentation></Apresentation>
 
-            <div className='register-right-content'>
+            <div className='login-right-content'>
               <ToastContainer
                 position='top-right'
                 autoClose={4000}
@@ -62,7 +75,7 @@ export default function Register() {
               <ToastContainer />
 
               <div className='form-container'>
-                <h1>Cadastre-se</h1>
+                <h1>Login</h1>
                 <p>Nome</p>
                 <input
                   type='text'
@@ -83,12 +96,20 @@ export default function Register() {
                   }
                 />
 
-                <button className='default-button'>Cadastrar</button>
+                <div className='login-buttons'>
+                  <button className='default-button' onClick={() => navigate(`/cadastro`)}>
+                    Cadastre-se
+                  </button>
+
+                  <button className='default-button' onClick={() => login()}>
+                    Entrar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      <Footer></Footer>
+        <Footer></Footer>
       </div>
     </Fragment>
   )

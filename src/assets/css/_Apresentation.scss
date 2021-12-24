@@ -1,7 +1,7 @@
-.apresentation-left-content {
+.apresentation-content {
   align-items: center;
   justify-content: center;
-  width: 350px;
+  width: 370px;
   display: flex;
   flex-direction: column;
 
@@ -10,7 +10,7 @@
 
   p {
     width: 100%;
-    text-align: center;
+    text-align: justify;
 
     a {
       color: $white-text;
@@ -24,7 +24,7 @@
     justify-content: center;
     margin-top: 20px;
 
-    p{
+    p {
       text-align: initial;
     }
 

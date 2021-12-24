@@ -1,15 +1,15 @@
-.header-register-footer {
+.header-login-footer {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.register {
+.login {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .register-container {
+  .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,8 @@
     background-color: $grey-100;
     border-radius: 6px;
     height: 500px;
-    .register-right-content {
+
+    .login-right-content {
       margin-right: 80px;
       width: 400px;
       .form-container {
@@ -37,8 +38,12 @@
           width: 300px;
         }
 
-        button {
+        .login-buttons {
           margin-top: 60px;
+        }
+
+        .login-buttons button:nth-child(2) {
+          margin-left: 20px;
         }
       }
     }

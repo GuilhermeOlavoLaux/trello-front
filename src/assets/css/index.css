@@ -1,4 +1,4 @@
-.header-header-footer {
+.header-register-footer {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,7 @@
   font-size: 50px;
 }
 .register .register-container .register-right-content .form-container input {
+  text-align: center;
   height: 20px;
   width: 300px;
 }
@@ -40,36 +41,36 @@
   margin-top: 60px;
 }
 
-.apresentation-left-content {
+.apresentation-content {
   align-items: center;
   justify-content: center;
-  width: 350px;
+  width: 370px;
   display: flex;
   flex-direction: column;
   margin-right: 40px;
   margin-left: 80px;
 }
-.apresentation-left-content p {
+.apresentation-content p {
   width: 100%;
-  text-align: center;
+  text-align: justify;
 }
-.apresentation-left-content p a {
+.apresentation-content p a {
   color: #eee;
   text-decoration: none;
 }
-.apresentation-left-content .about-me {
+.apresentation-content .about-me {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
-.apresentation-left-content .about-me p {
+.apresentation-content .about-me p {
   text-align: initial;
 }
-.apresentation-left-content .about-me h3 {
+.apresentation-content .about-me h3 {
   font-size: 1.4rem;
 }
-.apresentation-left-content .about-me img {
+.apresentation-content .about-me img {
   border-radius: 50%;
   height: 150px;
   margin-right: 40px;
@@ -145,4 +146,50 @@
 }
 .footer .footer-container img {
   height: 40px;
+}
+
+.header-login-footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  border: 2px solid #7ae30b;
+  background-color: #141314;
+  border-radius: 6px;
+  height: 500px;
+}
+.login .login-container .login-right-content {
+  margin-right: 80px;
+  width: 400px;
+}
+.login .login-container .login-right-content .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .login-container .login-right-content .form-container h1 {
+  font-size: 50px;
+}
+.login .login-container .login-right-content .form-container input {
+  text-align: center;
+  height: 20px;
+  width: 300px;
+}
+.login .login-container .login-right-content .form-container .login-buttons {
+  margin-top: 60px;
+}
+.login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
+  margin-left: 20px;
 }/*# sourceMappingURL=index.css.map */
