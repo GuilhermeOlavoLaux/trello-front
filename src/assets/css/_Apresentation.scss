@@ -1,7 +1,9 @@
 .apresentation-left-content {
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
 
   margin-right: 40px;
   margin-left: 80px;
@@ -21,6 +23,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+
+    p{
+      text-align: initial;
+    }
 
     h3 {
       font-size: 1.4rem;
