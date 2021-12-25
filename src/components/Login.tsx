@@ -7,8 +7,8 @@ import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
 interface IFields {
-    userName: string
-    password: string
+  userName: string
+  password: string
 }
 
 interface IToastConfig {
@@ -22,14 +22,15 @@ interface IToastConfig {
   progress: any
 }
 
+
 export default function Login() {
   const [fields, setFields] = useState<IFields>({} as IFields)
 
   const navigate = useNavigate()
 
-  function getToastConfig(id: string): IToastConfig {
+  function getToastConfig(): IToastConfig {
     return {
-      toastId: id,
+      toastId: 'id',
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -41,15 +42,16 @@ export default function Login() {
   }
 
   async function login() {
-    console.log(fields)
-
     const userName = fields.userName
     const password = fields.password
 
-
-    const cepRequest = await api.post('/login', {userName, password})
-
-    console.log(cepRequest)
+    try {
+      const login = await api.post('/login', { userName, password })
+      console.log(login)
+    } catch (error: any) {
+      console.log(error.response.data.error)
+      toast.error(`${error.response.data.error}`, getToastConfig())
+    }
   }
 
   return (
