@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, Fragment } from 'react'
+import { useState, ChangeEvent, Fragment, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../api/apiRotes'
 import { ToastContainer, toast } from 'react-toastify'
@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
+
+import { Context } from './context/AuthContext'
+
 interface IFields {
   userName: string
   password: string
@@ -28,6 +31,8 @@ export default function Login() {
 
   const navigate = useNavigate()
 
+  const {authenticated, handleLogin} = useContext(Context)
+
   function getToastConfig(): IToastConfig {
     return {
       toastId: 'id',
@@ -38,19 +43,6 @@ export default function Login() {
       pauseOnHover: true,
       draggable: false,
       progress: undefined
-    }
-  }
-
-  async function login() {
-    const userName = fields.userName
-    const password = fields.password
-
-    try {
-      const login = await api.post('/login', { userName, password })
-      console.log(login)
-    } catch (error: any) {
-      console.log(error.response.data.error)
-      toast.error(`${error.response.data.error}`, getToastConfig())
     }
   }
 
@@ -103,9 +95,7 @@ export default function Login() {
                     Cadastre-se
                   </button>
 
-                  <button className='default-button' onClick={() => login()}>
-                    Entrar
-                  </button>
+                  <button className='default-button' onClick={() =>handleLogin(fields.userName, fields.password)}>Entrar</button>
                 </div>
               </div>
             </div>
