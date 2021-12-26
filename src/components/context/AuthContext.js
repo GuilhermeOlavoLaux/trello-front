@@ -20,8 +20,7 @@ function AuthProvider({ children }) {
         history.push('/teste')
 
         setAuthenticated(true)
-    }
-    //aaaaa
+    } 
 
     return (
         <Context.Provider value={{ authenticated, handleLogin }}>
