@@ -9,8 +9,8 @@ export default function AppRoutes() {
     <Router history={History}>
       <Routes>
         <Route exact path='/' element={<Login />} />
-        <Route path='/cadastro' element={<Register />} />
-        <Route path='/teste' element={<Teste />} />
+        <Route exact path='/cadastro' element={<Register />} />
+        <Route exact path='/teste' element={<Teste />} />
 
       </Routes>
     </Router>
