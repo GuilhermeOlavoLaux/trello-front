@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, Fragment, useContext } from 'react'
+import { useState, ChangeEvent, Fragment, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../api/apiRotes'
 import { ToastContainer, toast } from 'react-toastify'
@@ -25,13 +25,12 @@ interface IToastConfig {
   progress: any
 }
 
-
 export default function Login() {
   const [fields, setFields] = useState<IFields>({} as IFields)
 
   const navigate = useNavigate()
 
-  const {authenticated, handleLogin} = useContext(Context)
+  const { authenticated, handleLogin } = useContext(Context)
 
   function getToastConfig(): IToastConfig {
     return {
@@ -45,6 +44,12 @@ export default function Login() {
       progress: undefined
     }
   }
+
+  useEffect(() => {
+    if(authenticated){
+      navigate('/teste')
+    }
+  }, [authenticated])
 
   return (
     <Fragment>
@@ -95,7 +100,12 @@ export default function Login() {
                     Cadastre-se
                   </button>
 
-                  <button className='default-button' onClick={() =>handleLogin(fields.userName, fields.password)}>Entrar</button>
+                  <button
+                    className='default-button'
+                    onClick={() => handleLogin(fields.userName, fields.password)}
+                  >
+                    Entrar
+                  </button>
                 </div>
               </div>
             </div>

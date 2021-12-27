@@ -1,10 +1,8 @@
 import { createContext, useState } from "react";
 import { api } from "../../api/apiRotes";
-import history from '../../History'
 
 const Context = createContext();
 
- 
 function AuthProvider({ children }) {
     const [authenticated, setAuthenticated] = useState(false)
 
@@ -16,18 +14,15 @@ function AuthProvider({ children }) {
 
         api.defaults.headers.Authorization = `Bearer ${token}`
 
-
-        history.push('/teste')
-
         setAuthenticated(true)
-    } 
+    }
 
     return (
-        <Context.Provider value={{ authenticated, handleLogin }}>
+        <Context.Provider value={{ authenticated, setAuthenticated, handleLogin }}>
             {children}
         </Context.Provider>
     )
-} 
+}
 
 
 
