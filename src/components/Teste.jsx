@@ -8,11 +8,12 @@ export default function Teste() {
     const navigate = useNavigate()
 
     const [testeAuth, setTesteAuth] = useState()
+    
     async function getTeste() {
-        const ab = await api.get('/testeAutenticacao')
-        setTesteAuth(ab.data)
+        const {data} = await api.get('/testeAutenticacao')
+        setTesteAuth(data)
     }
-    let { setAuthenticated } = useContext(Context)
+    let { handleLogout } = useContext(Context)
 
 
     useEffect(() => {
@@ -25,10 +26,14 @@ export default function Teste() {
             <h1>Revisar se a api pede middleware de autenticação</h1>
             <p style={{ color: 'white' }} > {testeAuth}</p>
 
+
+
             <button onClick={() => {
-                setAuthenticated(false)
+                handleLogout()
                 navigate('/')
-            }}>AAA</button>
+
+            }}>Deslogar</button>
+
 
         </>
     )
