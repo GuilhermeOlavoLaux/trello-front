@@ -3,6 +3,7 @@ import Register from '../components/Register'
 import Login from '../components/Login'
 import Teste from '../components/Teste'
 import ProtectedRoutes from './ProtectedRoutes'
+import Tasks from '../components/Tasks'
 
 export default function AppRoutes() {
 
@@ -15,8 +16,11 @@ export default function AppRoutes() {
       <Route exact path='/cadastro' element={<Register />} />
 
 
+
       <Route element={<ProtectedRoutes />}>
         <Route path="/teste" element={<Teste />} />
+
+        <Route path="/tasks" element={<Tasks />} />
       </Route>
     </Routes>
   )

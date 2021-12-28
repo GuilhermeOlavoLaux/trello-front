@@ -27,6 +27,7 @@ export default function useAuth() {
         api.defaults.headers.Authorization = undefined
 
     }
+    // console.log(authenticated)
     useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
@@ -36,8 +37,6 @@ export default function useAuth() {
 
         setLoaging(false)
     }, [])
-
-
 
     return { authenticated, loading, handleLogin, handleLogout }
 

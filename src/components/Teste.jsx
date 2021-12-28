@@ -8,9 +8,9 @@ export default function Teste() {
 
 
     const [testeAuth, setTesteAuth] = useState()
-    
+
     async function getTeste() {
-        const {data} = await api.get('/testeAutenticacao')
+        const { data } = await api.get('/testeAutenticacao')
         setTesteAuth(data)
     }
     let { handleLogout } = useContext(Context)
@@ -33,6 +33,9 @@ export default function Teste() {
 
             }}>Deslogar</button>
 
+            <button onClick={() => {
+                navigate('/tasks')
+            }}>Tasks</button>
 
         </>
     )
