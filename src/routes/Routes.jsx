@@ -1,21 +1,23 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Register from '../components/Register'
 import Login from '../components/Login'
 import Teste from '../components/Teste'
-import { useContext } from 'react'
-import { Context } from '../components/context/AuthContext'
+import ProtectedRoutes from './ProtectedRoutes'
 
 export default function AppRoutes() {
 
+  // const authenticated = useContext(Context)
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Login />} />
-        <Route exact path='/teste' element={<Teste />} />
-        <Route exact path='/cadastro' element={<Register />} />
 
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route exact path='/' element={<Login />} />
+      <Route exact path='/cadastro' element={<Register />} />
+
+
+      <Route element={<ProtectedRoutes />}>
+        <Route path="/teste" element={<Teste />} />
+      </Route>
+    </Routes>
   )
 }

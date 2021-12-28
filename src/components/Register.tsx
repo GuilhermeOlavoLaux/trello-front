@@ -1,9 +1,10 @@
 import { useState, ChangeEvent, Fragment } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
+
 interface IFields {
   userName: string
   password: string
@@ -22,9 +23,6 @@ interface IToastConfig {
 
 export default function Register() {
   const [fields, setFields] = useState<IFields>({} as IFields)
-
-
-
 
   function getToastConfig(id: string): IToastConfig {
     return {
@@ -88,7 +86,7 @@ export default function Register() {
             </div>
           </div>
         </div>
-      <Footer></Footer>
+        <Footer></Footer>
       </div>
     </Fragment>
   )

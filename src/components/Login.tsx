@@ -31,7 +31,7 @@ export default function Login() {
   const navigate = useNavigate()
 
   const { authenticated, handleLogin } = useContext(Context)
-
+  
   function getToastConfig(): IToastConfig {
     return {
       toastId: 'id',
@@ -46,7 +46,7 @@ export default function Login() {
   }
 
   useEffect(() => {
-    if(authenticated){
+    if (authenticated) {
       navigate('/teste')
     }
   }, [authenticated])

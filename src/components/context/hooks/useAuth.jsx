@@ -9,7 +9,6 @@ export default function useAuth() {
     const [loading, setLoaging] = useState(true)
 
     async function handleLogin(userName, password) {
-        console.log('asdasdas')
         const { data: { token } } = await api.post('/login', { userName, password })
 
         localStorage.setItem('token', JSON.stringify(token))
@@ -30,7 +29,6 @@ export default function useAuth() {
     }
     useEffect(() => {
         const token = localStorage.getItem('token')
-
         if (token) {
             api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`
             setAuthenticated(true)
@@ -39,9 +37,6 @@ export default function useAuth() {
         setLoaging(false)
     }, [])
 
-    if (loading) {
-        return <h1>carregando</h1>
-    }
 
 
     return { authenticated, loading, handleLogin, handleLogout }
