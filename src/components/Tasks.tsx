@@ -1,6 +1,4 @@
-import { useContext, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Context } from './context/AuthContext'
+import { useEffect } from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import { api } from '../api/apiRotes'
