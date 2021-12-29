@@ -4,11 +4,9 @@ import { Context } from './context/AuthContext'
 import Footer from './Footer'
 import Header from './Header'
 import { api } from '../api/apiRotes'
+import Drawer from './Drawer'
 
 export default function Tasks() {
-  //   const { handleLogout } = useContext(Context)
-  //   const navigate = useNavigate()
-
   async function getTasks() {
     const { data } = await api.get('/tasks')
 
@@ -27,10 +25,9 @@ export default function Tasks() {
       <Header></Header>
 
       <div className='tasks-screen'>
-        <div className='drawer'></div>
+        <Drawer></Drawer>
+
         <div className='tasks-screen-container'>
-
-
           <div className='tasks'>
             <div className='tasks-container'>
               <div className='to-do'>
