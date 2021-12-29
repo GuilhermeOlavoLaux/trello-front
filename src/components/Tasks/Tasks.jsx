@@ -1,27 +1,29 @@
-import { useEffect } from 'react'
-import Footer from './Footer'
-import Header from './Header'
-import { api } from '../api/apiRotes'
-import Drawer from './Drawer'
+import { useEffect, useState } from 'react'
+import Footer from '../Footer'
+import Header from '../Header'
+import { api } from '../../api/apiRotes'
+import Drawer from '../Drawer'
 
 export default function Tasks() {
-  async function getTasks() {
-    const { data } = await api.get('/tasks')
+  const [tasks, setTasks] = useState();
 
-    const token = localStorage.getItem('token')
-    console.log(token)
 
-    console.log(data)
+
+  async function fetchTasks() {
+    const { data } = await api.get('/tasks');
+
+    setTasks(data)
   }
 
   useEffect(() => {
-    getTasks()
-  }, [])
+
+    fetchTasks();
+
+  }, []);
 
   return (
     <>
       <Header></Header>
-
       <div className='tasks-screen'>
         <Drawer></Drawer>
 
@@ -36,6 +38,7 @@ export default function Tasks() {
                   <li>4</li>
                 </ul>
               </div>
+
 
               <div className='completed'>
                 <ul>

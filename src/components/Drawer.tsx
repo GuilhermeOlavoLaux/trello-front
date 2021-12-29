@@ -1,10 +1,14 @@
-import { Fragment, useContext } from 'react'
-import { Context } from './context/DrawerContext'
+import { Fragment, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Drawer() {
-  const { drawerFlag, handleModalOpening } = useContext(Context)
+  const [drawerFlag, setDrawerFlag] = useState(true)
+
+  function handleModalOpening() {
+      setDrawerFlag(!drawerFlag)
+  }
+
 
   return (
     <Fragment>
