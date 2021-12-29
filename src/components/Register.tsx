@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, Fragment } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
@@ -23,6 +24,8 @@ interface IToastConfig {
 
 export default function Register() {
   const [fields, setFields] = useState<IFields>({} as IFields)
+
+  const navigate = useNavigate()
 
   function getToastConfig(id: string): IToastConfig {
     return {
@@ -81,7 +84,14 @@ export default function Register() {
                   }
                 />
 
-                <button className='default-button'>Cadastrar</button>
+                <div className='register-buttons'>
+                  <button className='default-button' onClick={() => navigate(`/`)}>
+                    Login
+                  </button>
+
+                  <button className='default-button'>Cadastrar</button>
+                </div>
+
               </div>
             </div>
           </div>

@@ -37,8 +37,12 @@
           width: 300px;
         }
 
-        button {
+        .register-buttons {
           margin-top: 60px;
+        }
+
+        .register-buttons button:nth-child(2) {
+          margin-left: 20px;
         }
       }
     }

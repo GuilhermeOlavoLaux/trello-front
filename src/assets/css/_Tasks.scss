@@ -1,0 +1,33 @@
+.tasks-screen {
+  height: 80vh;
+  display: flex;
+
+  .drawer {
+    height: 80vh;
+    width: 20px;
+    background-color: red;
+  }
+
+  .tasks-screen-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tasks {
+      color: $white-text;
+
+      border: 2px solid $green-light;
+      background-color: $grey-100;
+      border-radius: 6px;
+      height: 85%;
+      width: 80%;
+      .tasks-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+}

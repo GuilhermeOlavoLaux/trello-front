@@ -27,7 +27,6 @@ export default function useAuth() {
         api.defaults.headers.Authorization = undefined
 
     }
-    // console.log(authenticated)
     useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
