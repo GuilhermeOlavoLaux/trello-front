@@ -53,8 +53,8 @@ export default function Login() {
 
   return (
     <Fragment>
-      <div className='header-login-footer'>
         <Header></Header>
+      <div className='login-screen'>
         <div className='login'>
           <div className='login-container'>
             <Apresentation></Apresentation>
@@ -97,7 +97,7 @@ export default function Login() {
 
                 <div className='login-buttons'>
                   <button className='default-button' onClick={() => navigate(`/cadastro`)}>
-                    Cadastre-se
+                    Cadastrar-se
                   </button>
 
                   <button
@@ -111,8 +111,8 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <Footer></Footer>
       </div>
+        <Footer></Footer>
     </Fragment>
   )
 }

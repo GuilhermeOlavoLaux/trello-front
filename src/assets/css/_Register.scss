@@ -1,48 +1,48 @@
-.header-register-footer {
-  height: 100%;
+.register-screen {
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.register {
-  display: flex;
-  align-items: center;
   justify-content: center;
-
-  .register-container {
+  .register {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white-text;
 
-    border: 2px solid $green-light;
-    background-color: $grey-100;
-    border-radius: 6px;
-    height: 500px;
-    .register-right-content {
-      margin-right: 80px;
-      width: 400px;
-      .form-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .register-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white-text;
 
-        h1 {
-          font-size: 50px;
-        }
+      border: 2px solid $green-light;
+      background-color: $grey-100;
+      border-radius: 6px;
+      height: 500px;
+      .register-right-content {
+        margin-right: 80px;
+        width: 400px;
+        .form-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-        input {
-          text-align: center;
-          height: 20px;
-          width: 300px;
-        }
+          h1 {
+            font-size: 50px;
+          }
 
-        .register-buttons {
-          margin-top: 60px;
-        }
+          input {
+            text-align: center;
+            height: 20px;
+            width: 300px;
+          }
 
-        .register-buttons button:nth-child(2) {
-          margin-left: 20px;
+          .register-buttons {
+            margin-top: 60px;
+          }
+
+          .register-buttons button:nth-child(2) {
+            margin-left: 20px;
+          }
         }
       }
     }

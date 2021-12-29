@@ -42,8 +42,8 @@ export default function Register() {
 
   return (
     <Fragment>
-      <div className='header-register-footer'>
         <Header></Header>
+      <div className='register-screen'>
         <div className='register'>
           <div className='register-container'>
             <Apresentation></Apresentation>
@@ -96,8 +96,8 @@ export default function Register() {
             </div>
           </div>
         </div>
-        <Footer></Footer>
       </div>
+        <Footer></Footer>
     </Fragment>
   )
 }

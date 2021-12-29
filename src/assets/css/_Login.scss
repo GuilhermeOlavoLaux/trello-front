@@ -1,49 +1,50 @@
-.header-login-footer {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.login {
+.login-screen {
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .login-container {
+  .login {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white-text;
 
-    border: 2px solid $green-light;
-    background-color: $grey-100;
-    border-radius: 6px;
-    height: 500px;
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white-text;
 
-    .login-right-content {
-      margin-right: 80px;
-      width: 400px;
-      .form-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      border: 2px solid $green-light;
+      background-color: $grey-100;
+      border-radius: 6px;
+      height: 500px;
 
-        h1 {
-          font-size: 50px;
-        }
+      .login-right-content {
+        margin-right: 80px;
+        width: 400px;
+        .form-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-        input {
-          text-align: center;
-          height: 20px;
-          width: 300px;
-        }
+          h1 {
+            font-size: 50px;
+          }
 
-        .login-buttons {
-          margin-top: 60px;
-        }
+          input {
+            text-align: center;
+            height: 20px;
+            width: 300px;
+          }
 
-        .login-buttons button:nth-child(2) {
-          margin-left: 20px;
+          .login-buttons {
+            margin-top: 60px;
+          }
+
+          .login-buttons button:nth-child(2) {
+            margin-left: 20px;
+          }
         }
       }
     }

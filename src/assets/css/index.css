@@ -1,16 +1,15 @@
-.header-register-footer {
-  height: 100%;
+.register-screen {
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
-
-.register {
+.register-screen .register {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.register .register-container {
+.register-screen .register .register-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,27 +19,27 @@
   border-radius: 6px;
   height: 500px;
 }
-.register .register-container .register-right-content {
+.register-screen .register .register-container .register-right-content {
   margin-right: 80px;
   width: 400px;
 }
-.register .register-container .register-right-content .form-container {
+.register-screen .register .register-container .register-right-content .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.register .register-container .register-right-content .form-container h1 {
+.register-screen .register .register-container .register-right-content .form-container h1 {
   font-size: 50px;
 }
-.register .register-container .register-right-content .form-container input {
+.register-screen .register .register-container .register-right-content .form-container input {
   text-align: center;
   height: 20px;
   width: 300px;
 }
-.register .register-container .register-right-content .form-container .register-buttons {
+.register-screen .register .register-container .register-right-content .form-container .register-buttons {
   margin-top: 60px;
 }
-.register .register-container .register-right-content .form-container .register-buttons button:nth-child(2) {
+.register-screen .register .register-container .register-right-content .form-container .register-buttons button:nth-child(2) {
   margin-left: 20px;
 }
 
@@ -151,19 +150,18 @@
   height: 40px;
 }
 
-.header-login-footer {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.login {
+.login-screen {
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login .login-container {
+.login-screen .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-screen .login .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,27 +171,27 @@
   border-radius: 6px;
   height: 500px;
 }
-.login .login-container .login-right-content {
+.login-screen .login .login-container .login-right-content {
   margin-right: 80px;
   width: 400px;
 }
-.login .login-container .login-right-content .form-container {
+.login-screen .login .login-container .login-right-content .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.login .login-container .login-right-content .form-container h1 {
+.login-screen .login .login-container .login-right-content .form-container h1 {
   font-size: 50px;
 }
-.login .login-container .login-right-content .form-container input {
+.login-screen .login .login-container .login-right-content .form-container input {
   text-align: center;
   height: 20px;
   width: 300px;
 }
-.login .login-container .login-right-content .form-container .login-buttons {
+.login-screen .login .login-container .login-right-content .form-container .login-buttons {
   margin-top: 60px;
 }
-.login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
+.login-screen .login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
   margin-left: 20px;
 }
 
