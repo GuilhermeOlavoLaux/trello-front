@@ -1,5 +1,7 @@
 import { Fragment, useContext } from 'react'
 import { Context } from './context/DrawerContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Drawer() {
   const { drawerFlag, handleModalOpening } = useContext(Context)
@@ -7,11 +9,14 @@ export default function Drawer() {
   return (
     <Fragment>
       <div className={drawerFlag ? 'drawerOpen' : 'drawerClosed'}>
-        <p className='logo' onClick={() => handleModalOpening()}>
-          imagem
-        </p>
+        <FontAwesomeIcon
+          icon={faBars}
+          size='lg'
+          className='burguer-icon'
+          onClick={() => handleModalOpening()}
+        ></FontAwesomeIcon>
 
-        <h1>Trelo</h1>
+        <h1>Trello</h1>
 
         <ul>
           <li>A fazer</li>

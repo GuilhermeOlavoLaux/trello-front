@@ -227,10 +227,11 @@
   background-color: #444444;
   text-align: center;
 }
-.drawerOpen .logo {
+.drawerOpen .burguer-icon {
   position: absolute;
   top: 20px;
   right: 10px;
+  cursor: pointer;
 }
 .drawerOpen h1 {
   margin-top: 80px;
@@ -243,6 +244,11 @@
 
 .drawerClosed {
   height: 80vh;
+}
+.drawerClosed .burguer-icon {
+  margin: 20px;
+  color: #7ae30b;
+  cursor: pointer;
 }
 .drawerClosed h1 {
   margin-top: 80px;
