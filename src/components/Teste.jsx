@@ -2,6 +2,9 @@ import { useEffect, useState, useContext } from 'react'
 import { api } from '../api/apiRotes'
 import { useNavigate } from "react-router-dom";
 import { Context } from './context/AuthContext'
+
+
+
 export default function Teste() {
 
     const navigate = useNavigate()
