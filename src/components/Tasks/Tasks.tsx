@@ -12,7 +12,7 @@ interface ITask {
 }
 
 export default function Tasks() {
-  const [tasks, setTasks] = useState()
+  const [tasks, setTasks] = useState([])
 
   async function fetchTasks() {
     const { data } = await api.get('/tasks')
@@ -24,52 +24,23 @@ export default function Tasks() {
     fetchTasks()
   }, [])
 
-  function renderCompletedTasks() {
-    //@ts-ignore
-    const tasksMap = tasks.map((task: ITask) => {
-      if (task.situation === 'Completa') {
-        console.log(task)
 
-        return (
-          <>
+  function separateTasks(taskSituationType: string){
+
+      const tasksMap = tasks.map((task: ITask) => {
+        if (task.situation === taskSituationType) {
+          
+          return (
+            <>
             <Task name={task.name} description={task.description} situation={task.situation}></Task>
           </>
         )
+      } else {
+        return null
       }
     })
     return tasksMap
-  }
 
-  function renderToDoTasks() {
-    //@ts-ignore
-    const tasksMap = tasks.map((task: ITask) => {
-      if (task.situation === 'A fazer') {
-        console.log(task)
-
-        return (
-          <>
-            <Task name={task.name} description={task.description} situation={task.situation}></Task>
-          </>
-        )
-      }
-    })
-    return tasksMap
-  }
-
-  function renderInProgressTasks() {
-    //@ts-ignore
-    const tasksMap = tasks.map((task: ITask) => {
-      if (task.situation === 'Em andamento') {
-        console.log(task)
-
-        return (
-          <>
-            <Task name={task.name} description={task.description} situation={task.situation}></Task>
-          </>
-        )
-      }
-    })
-    return tasksMap
   }
 
   function renderTasks() {
@@ -77,11 +48,18 @@ export default function Tasks() {
       return (
         <Fragment>
           <div className='tasks-container'>
-            <div className='to-do'>{renderToDoTasks()}</div>
+            <div className='to-do'>
+              <h2>A fazer</h2>
+              
+              {separateTasks('Em andamento')}</div>
 
-            <div className='completed'>{renderCompletedTasks()}</div>
+            <div className='in-progress'>
+              <h2>Em andamento</h2>
+              {separateTasks('A fazer')}</div>
 
-            <div className='in-progress'>{renderInProgressTasks()}</div>
+            <div className='completed'>
+              <h2>Completas</h2>
+              {separateTasks('Completa')}</div>
 
           </div>
         </Fragment>
@@ -98,7 +76,10 @@ export default function Tasks() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <div className='tasks'>{renderTasks()}</div>
+          <div className='tasks'>
+            <h1>Suas tarefas</h1>
+            
+            {renderTasks()}</div>
         </div>
       </div>
       <Footer></Footer>

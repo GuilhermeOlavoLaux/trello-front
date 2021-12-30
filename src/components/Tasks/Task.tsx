@@ -14,7 +14,7 @@ export default function Task(props:ITask) {
     <Fragment>
       <div className='task'>
         <div className='task-container'>
-          <h1>{props.name}</h1>
+          <h3>{props.name}</h3>
 
           <p>{props.description}</p>
           <p>{props.situation}</p>
