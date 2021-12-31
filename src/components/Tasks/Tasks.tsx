@@ -24,14 +24,11 @@ export default function Tasks() {
     fetchTasks()
   }, [])
 
-
-  function separateTasks(taskSituationType: string){
-
-      const tasksMap = tasks.map((task: ITask) => {
-        if (task.situation === taskSituationType) {
-          
-          return (
-            <>
+  function separateTasks(taskSituationType: string) {
+    const tasksMap = tasks.map((task: ITask) => {
+      if (task.situation === taskSituationType) {
+        return (
+          <>
             <Task name={task.name} description={task.description} situation={task.situation}></Task>
           </>
         )
@@ -40,7 +37,6 @@ export default function Tasks() {
       }
     })
     return tasksMap
-
   }
 
   function renderTasks() {
@@ -50,17 +46,20 @@ export default function Tasks() {
           <div className='tasks-container'>
             <div className='to-do'>
               <h2>A fazer</h2>
-              
-              {separateTasks('Em andamento')}</div>
+              <div className='to-do-container'>{separateTasks('Em andamento')}</div>
+            </div>
 
             <div className='in-progress'>
               <h2>Em andamento</h2>
-              {separateTasks('A fazer')}</div>
+
+              <div className='in-progress-container'>{separateTasks('A fazer')}</div>
+            </div>
 
             <div className='completed'>
               <h2>Completas</h2>
-              {separateTasks('Completa')}</div>
 
+              <div className='completed-container'>{separateTasks('Completa')}</div>
+            </div>
           </div>
         </Fragment>
       )
@@ -78,8 +77,9 @@ export default function Tasks() {
         <div className='tasks-screen-container'>
           <div className='tasks'>
             <h1>Suas tarefas</h1>
-            
-            {renderTasks()}</div>
+
+            {renderTasks()}
+          </div>
         </div>
       </div>
       <Footer></Footer>

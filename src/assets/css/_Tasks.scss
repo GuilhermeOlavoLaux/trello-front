@@ -11,6 +11,7 @@
     .tasks {
       color: $white-text;
 
+      overflow: hidden;
       text-align: center;
       border: 2px solid $green-light;
       background-color: $grey-100;
@@ -18,38 +19,54 @@
       height: 85%;
       width: 80%;
 
+      h1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
       .tasks-container {
         display: flex;
         width: 100%;
         justify-content: space-evenly;
 
-
-        .to-do{
-          h2{
+        .to-do {
+          h2 {
             margin: 0px;
             padding-bottom: 5px;
             background-color: $green-light;
             color: black;
             border-radius: 10px 10px 0px 0px;
           }
+          .to-do-container {
+            height: 430px;
+            overflow-y: scroll;
+          }
         }
 
-        .in-progress{
-          h2{
+        .in-progress {
+          h2 {
             margin: 0px;
             padding-bottom: 5px;
             background-color: $green-light;
             color: black;
             border-radius: 10px 10px 0px 0px;
           }
+          .in-progress-container {
+            height: 430px;
+            overflow-y: scroll;
+          }
         }
-        .completed{
-          h2{
+        .completed {
+          h2 {
             margin: 0px;
             padding-bottom: 5px;
             background-color: $green-light;
             color: black;
             border-radius: 10px 10px 0px 0px;
+          }
+          .completed-container {
+            height: 430px;
+            overflow-y: scroll;
           }
         }
       }
