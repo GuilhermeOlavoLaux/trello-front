@@ -219,6 +219,27 @@
   width: 100%;
   justify-content: space-evenly;
 }
+.tasks-screen .tasks-screen-container .tasks .tasks-container .to-do h2 {
+  margin: 0px;
+  padding-bottom: 5px;
+  background-color: #7ae30b;
+  color: black;
+  border-radius: 10px 10px 0px 0px;
+}
+.tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress h2 {
+  margin: 0px;
+  padding-bottom: 5px;
+  background-color: #7ae30b;
+  color: black;
+  border-radius: 10px 10px 0px 0px;
+}
+.tasks-screen .tasks-screen-container .tasks .tasks-container .completed h2 {
+  margin: 0px;
+  padding-bottom: 5px;
+  background-color: #7ae30b;
+  color: black;
+  border-radius: 10px 10px 0px 0px;
+}
 
 .drawerOpen {
   position: relative;
@@ -256,4 +277,14 @@
 }
 .drawerClosed ul {
   display: none;
+}
+
+.task {
+  display: flex;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-around;
+  background-color: #444444;
+  border-top: 2px solid #141314;
 }/*# sourceMappingURL=index.css.map */
