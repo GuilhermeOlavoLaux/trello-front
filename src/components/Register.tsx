@@ -1,18 +1,20 @@
 import { useState, ChangeEvent, Fragment } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
 
+import { api } from '../api/apiRotes'
+
 interface IFields {
   userName: string
   password: string
+  tasks: []
 }
 
 interface IToastConfig {
-  toastId: string
   position: any
   autoClose: number
   hideProgressBar: boolean
@@ -27,9 +29,8 @@ export default function Register() {
 
   const navigate = useNavigate()
 
-  function getToastConfig(id: string): IToastConfig {
+  function getToastConfig(): IToastConfig {
     return {
-      toastId: id,
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -40,9 +41,20 @@ export default function Register() {
     }
   }
 
+  async function registerUser() {
+    const { userName, password } = fields
+
+    try {
+      const postUser = await api.post('/createUser', { userName, password })
+      toast.success(postUser.data.message, getToastConfig())
+    } catch (error: any) {
+      toast.error(error.response.data.error, getToastConfig())
+    }
+  }
+
   return (
     <Fragment>
-        <Header></Header>
+      <Header></Header>
       <div className='register-screen'>
         <div className='register'>
           <div className='register-container'>
@@ -89,15 +101,16 @@ export default function Register() {
                     Login
                   </button>
 
-                  <button className='default-button'>Cadastrar</button>
+                  <button className='default-button' onClick={() => registerUser()}>
+                    Cadastrar
+                  </button>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </Fragment>
   )
 }

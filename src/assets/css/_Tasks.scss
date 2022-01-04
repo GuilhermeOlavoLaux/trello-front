@@ -28,8 +28,12 @@
         display: flex;
         width: 100%;
         justify-content: space-evenly;
-
+        height: 80%;
+        overflow: hidden;
         .to-do {
+          height: 80%;
+          background-color: $grey-200;
+          border-radius: 10px;
           h2 {
             margin: 0px;
             padding-bottom: 5px;
@@ -38,12 +42,16 @@
             border-radius: 10px 10px 0px 0px;
           }
           .to-do-container {
-            height: 430px;
-            overflow-y: scroll;
+            height: 100%;
+            overflow-y: auto;
           }
         }
 
         .in-progress {
+          height: 80%;
+          background-color: $grey-200;
+          border-radius: 10px;
+
           h2 {
             margin: 0px;
             padding-bottom: 5px;
@@ -52,11 +60,14 @@
             border-radius: 10px 10px 0px 0px;
           }
           .in-progress-container {
-            height: 430px;
-            overflow-y: scroll;
+            height: 100%;
+            overflow-y: auto;
           }
         }
         .completed {
+          height: 80%;
+          background-color: $grey-200;
+          border-radius: 10px;
           h2 {
             margin: 0px;
             padding-bottom: 5px;
@@ -65,8 +76,8 @@
             border-radius: 10px 10px 0px 0px;
           }
           .completed-container {
-            height: 430px;
-            overflow-y: scroll;
+            height: 100%;
+            overflow-y: auto;
           }
         }
       }
