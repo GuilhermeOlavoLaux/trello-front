@@ -5,6 +5,11 @@ import { api } from '../../api/apiRotes'
 import Drawer from '../Drawer'
 import Task from './Task'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import AddTaskModal from './AddTaskModal'
+import { Button, Modal } from 'react-bootstrap'
+
 interface ITask {
   name: string
   description: string
@@ -13,6 +18,9 @@ interface ITask {
 
 export default function Tasks() {
   const [tasks, setTasks] = useState([])
+  const [modalShow, setModalShow] = useState(false)
+  //TODO FAZER A MODAL PEGAR A SITUAÇÃO DA TAREFA DEPENDENDO DE QUAL O USUÁRIO SELECIONAR
+  const [taskSituation, setTaskSituation] = useState('')
 
   async function fetchTasks() {
     const { data } = await api.get('/tasks')
@@ -43,20 +51,59 @@ export default function Tasks() {
     if (tasks) {
       return (
         <Fragment>
+          <AddTaskModal show={modalShow} onHide={() => setModalShow(false)} />
+
           <div className='tasks-container'>
             <div className='to-do'>
-              <h2>A fazer</h2>
+              <div className='to-do-tittle'>
+                <h4>A fazer</h4>
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  size='lg'
+                  color='black'
+                  className='plus-icon'
+                  onClick={() => {
+                    setModalShow(true)
+                    setTaskSituation('to-do')
+                  }}
+                ></FontAwesomeIcon>
+              </div>
+
               <div className='to-do-container'>{separateTasks('Em andamento')}</div>
             </div>
 
             <div className='in-progress'>
-              <h2>Em andamento</h2>
+              <div className='in-progress-tittle'>
+                <h4>Em andamento</h4>
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  size='lg'
+                  color='black'
+                  className='plus-icon'
+                  onClick={() => {
+                    setModalShow(true)
+                    setTaskSituation('in-progress')
+                  }}
+                ></FontAwesomeIcon>
+              </div>
 
               <div className='in-progress-container'>{separateTasks('A fazer')}</div>
             </div>
 
             <div className='completed'>
-              <h2>Completas</h2>
+              <div className='completed-tittle'>
+                <h4>Completas</h4>
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  size='lg'
+                  color='black'
+                  className='plus-icon'
+                  onClick={() => {
+                    setModalShow(true)
+                    setTaskSituation('completed')
+                  }}
+                ></FontAwesomeIcon>
+              </div>
 
               <div className='completed-container'>{separateTasks('Completa')}</div>
             </div>

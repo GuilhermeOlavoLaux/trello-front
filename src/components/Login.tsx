@@ -1,28 +1,19 @@
 import { useState, ChangeEvent, Fragment, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+
 import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
 
 import { Context } from './context/AuthContext'
+import { ToastContainer } from 'react-toastify'
 
 interface IFields {
   userName: string
   password: string
 }
 
-interface IToastConfig {
-  toastId: string
-  position: any
-  autoClose: number
-  hideProgressBar: boolean
-  closeOnClick: boolean
-  pauseOnHover: boolean
-  draggable: boolean
-  progress: any
-}
+
 
 export default function Login() {
   const [fields, setFields] = useState<IFields>({} as IFields)
@@ -31,18 +22,7 @@ export default function Login() {
 
   const { authenticated, handleLogin } = useContext(Context)
   
-  function getToastConfig(): IToastConfig {
-    return {
-      toastId: 'id',
-      position: 'top-right',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined
-    }
-  }
+  
 
   useEffect(() => {
     if (authenticated) {

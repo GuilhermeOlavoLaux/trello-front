@@ -1,7 +1,7 @@
 body {
   margin: 0px;
-  font-family: 'PT Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Sans', sans-serif !important; 
+  font-family: 'Roboto', sans-serif !important;
 }
 .root {
   background-color: #242222;

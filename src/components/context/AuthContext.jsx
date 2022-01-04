@@ -8,7 +8,7 @@ function AuthProvider({ children }) {
     const { authenticated, setAuthenticated, handleLogin, handleLogout, loading } = useAuth()
 
     if (loading) {
-        return <h1>a</h1>
+        return <h1>Loading</h1>
     }
     else {
 

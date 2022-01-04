@@ -226,17 +226,27 @@
   height: 80%;
   overflow: hidden;
 }
+.tasks-screen .tasks-screen-container .tasks .tasks-container .plus-icon {
+  cursor: pointer;
+}
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do {
   height: 80%;
   background-color: #444444;
+  min-width: 300px;
   border-radius: 10px;
 }
-.tasks-screen .tasks-screen-container .tasks .tasks-container .to-do h2 {
-  margin: 0px;
-  padding-bottom: 5px;
+.tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-tittle {
+  display: flex;
   background-color: #7ae30b;
-  color: black;
   border-radius: 10px 10px 0px 0px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px 0px 5px;
+}
+.tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-tittle h4 {
+  margin: 4px;
+  padding-bottom: 5px;
+  color: black;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-container {
   height: 100%;
@@ -246,13 +256,20 @@
   height: 80%;
   background-color: #444444;
   border-radius: 10px;
+  min-width: 300px;
 }
-.tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress h2 {
-  margin: 0px;
-  padding-bottom: 5px;
+.tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-tittle {
+  display: flex;
   background-color: #7ae30b;
-  color: black;
   border-radius: 10px 10px 0px 0px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px 0px 5px;
+}
+.tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-tittle h4 {
+  margin: 4px;
+  padding-bottom: 5px;
+  color: black;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-container {
   height: 100%;
@@ -262,13 +279,20 @@
   height: 80%;
   background-color: #444444;
   border-radius: 10px;
+  min-width: 300px;
 }
-.tasks-screen .tasks-screen-container .tasks .tasks-container .completed h2 {
-  margin: 0px;
-  padding-bottom: 5px;
+.tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-tittle {
+  display: flex;
   background-color: #7ae30b;
-  color: black;
   border-radius: 10px 10px 0px 0px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px 0px 5px;
+}
+.tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-tittle h4 {
+  margin: 4px;
+  padding-bottom: 5px;
+  color: black;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-container {
   height: 100%;
@@ -290,11 +314,13 @@
 }
 .drawerOpen h1 {
   margin-top: 80px;
+  color: #eee;
 }
 .drawerOpen ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
+  color: #eee;
 }
 
 .drawerClosed {
@@ -308,9 +334,11 @@
 .drawerClosed h1 {
   margin-top: 80px;
   display: none;
+  color: #eee;
 }
 .drawerClosed ul {
   display: none;
+  color: #eee;
 }
 
 .task {
