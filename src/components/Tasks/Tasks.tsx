@@ -8,7 +8,6 @@ import Task from './Task'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import AddTaskModal from './AddTaskModal'
-import { Button, Modal } from 'react-bootstrap'
 
 interface ITask {
   name: string
@@ -51,7 +50,11 @@ export default function Tasks() {
     if (tasks) {
       return (
         <Fragment>
-          <AddTaskModal show={modalShow} onHide={() => setModalShow(false)} />
+          <AddTaskModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            situation={taskSituation}
+          />
 
           <div className='tasks-container'>
             <div className='to-do'>
