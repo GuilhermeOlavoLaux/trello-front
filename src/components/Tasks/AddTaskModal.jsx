@@ -1,5 +1,5 @@
 import { Button, Modal } from "react-bootstrap";
-import {useState} from 'react'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function AddTaskModal(props) {
@@ -28,8 +28,8 @@ export default function AddTaskModal(props) {
                     </div>
 
                     <div className='buttons-container'>
-                        <Button onClick={handleClose}>Fechar</Button>
-                        <Button onClick={saveNewTask}>Salvar</Button>
+                        <Button onClick={props.onHide}>Close</Button>
+                        {/* <Button onClick={saveNewTask}>Salvar</Button> */}
                     </div>
                 </div>
             </Modal.Body>
