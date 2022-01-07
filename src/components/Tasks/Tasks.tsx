@@ -19,7 +19,7 @@ export default function Tasks() {
   const [tasks, setTasks] = useState([])
   const [modalShow, setModalShow] = useState(false)
   //TODO FAZER A MODAL PEGAR A SITUAÇÃO DA TAREFA DEPENDENDO DE QUAL O USUÁRIO SELECIONAR
-  const [taskSituation, setTaskSituation] = useState('')
+  const [taskSituation, setTaskSituation] = useState([''])
 
   async function fetchTasks() {
     const { data } = await api.get('/tasks')
@@ -67,12 +67,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation('to-do')
+                    setTaskSituation(['to-do', 'A fazer'])
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='to-do-container'>{separateTasks('Em andamento')}</div>
+              <div className='to-do-container'>{separateTasks('in-progress')}</div>
             </div>
 
             <div className='in-progress'>
@@ -85,12 +85,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation('in-progress')
+                    setTaskSituation(['in-progress', 'Em andamento'])
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='in-progress-container'>{separateTasks('A fazer')}</div>
+              <div className='in-progress-container'>{separateTasks('to-do')}</div>
             </div>
 
             <div className='completed'>
@@ -103,12 +103,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation('completed')
+                    setTaskSituation(['completed', 'Completas'])
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='completed-container'>{separateTasks('Completa')}</div>
+              <div className='completed-container'>{separateTasks('completed')}</div>
             </div>
           </div>
         </Fragment>
