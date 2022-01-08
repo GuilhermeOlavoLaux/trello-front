@@ -17,18 +17,21 @@ interface ITask {
 
 export default function Tasks() {
   const [tasks, setTasks] = useState([])
+
   const [modalShow, setModalShow] = useState(false)
-  //TODO FAZER A MODAL PEGAR A SITUAÇÃO DA TAREFA DEPENDENDO DE QUAL O USUÁRIO SELECIONAR
+
   const [taskSituation, setTaskSituation] = useState([''])
 
   async function fetchTasks() {
     const { data } = await api.get('/tasks')
-
     setTasks(data.userTasks)
   }
 
+
+
   useEffect(() => {
     fetchTasks()
+
   }, [])
 
   function separateTasks(taskSituationType: string) {
@@ -54,6 +57,7 @@ export default function Tasks() {
             show={modalShow}
             onHide={() => setModalShow(false)}
             situation={taskSituation}
+            refreshTasks={fetchTasks}
           />
 
           <div className='tasks-container'>
@@ -72,7 +76,7 @@ export default function Tasks() {
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='to-do-container'>{separateTasks('in-progress')}</div>
+              <div className='to-do-container'>{separateTasks('to-do')}</div>
             </div>
 
             <div className='in-progress'>
@@ -90,7 +94,7 @@ export default function Tasks() {
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='in-progress-container'>{separateTasks('to-do')}</div>
+              <div className='in-progress-container'>{separateTasks('in-progress')}</div>
             </div>
 
             <div className='completed'>
