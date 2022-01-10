@@ -1,0 +1,28 @@
+.task {
+  display: flex;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-around;
+  background-color: $grey-200;
+  border-top: 2px solid $grey-100;
+
+  h3 {
+    width: 100px;
+    height: 18px;
+    overflow: hidden;
+    font-size: 18px;
+    text-overflow: ellipsis;
+  }
+
+  .task-controllers {
+    .icon {
+      padding-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .task-controllers.icon:nth-child(1) {
+    padding-left: 0px;
+  }
+}

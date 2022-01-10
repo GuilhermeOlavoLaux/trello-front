@@ -195,6 +195,171 @@
   margin-left: 20px;
 }
 
+.drawerOpen {
+  position: relative;
+  height: 80vh;
+  width: 200px;
+  background-color: #444444;
+  text-align: center;
+}
+.drawerOpen .burguer-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.drawerOpen h1 {
+  margin-top: 80px;
+  color: #eee;
+}
+.drawerOpen ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: #eee;
+}
+
+.drawerClosed {
+  height: 80vh;
+}
+.drawerClosed .burguer-icon {
+  margin: 20px;
+  color: #7ae30b;
+  cursor: pointer;
+}
+.drawerClosed h1 {
+  margin-top: 80px;
+  display: none;
+  color: #eee;
+}
+.drawerClosed ul {
+  display: none;
+  color: #eee;
+}
+
+.add-task-modal {
+  background-color: #141314;
+}
+.add-task-modal .add-task-container {
+  position: relative;
+  height: 500px;
+  border: solid #7ae30b 2px;
+  border-radius: 6px;
+}
+.add-task-modal .add-task-container h1 {
+  color: #7ae30b;
+  color: #eee;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.add-task-modal .add-task-container .id-input-container {
+  margin-top: 60px;
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+}
+.add-task-modal .add-task-container .id-input-container p {
+  padding-right: 48px;
+  color: #eee;
+  width: 100px;
+}
+.add-task-modal .add-task-container .id-input-container input {
+  background-color: #444444;
+  color: #eee;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+  width: 300px;
+}
+.add-task-modal .add-task-container .name-input-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+}
+.add-task-modal .add-task-container .name-input-container p {
+  color: #eee;
+  width: 100px;
+}
+.add-task-modal .add-task-container .name-input-container input {
+  background-color: #444444;
+  color: #eee;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+  width: 300px;
+}
+.add-task-modal .add-task-container .description-input-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+}
+.add-task-modal .add-task-container .description-input-container p {
+  color: #eee;
+  width: 100px;
+}
+.add-task-modal .add-task-container .description-input-container textarea {
+  margin-top: 5px;
+  padding: 10px;
+  width: 300px;
+  height: 80px;
+  background-color: #444444;
+  color: #eee;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+}
+.add-task-modal .add-task-container .buttons-container {
+  display: flex;
+  margin-top: 130px;
+  margin-left: 160px;
+  margin-right: 20px;
+}
+.add-task-modal .add-task-container .buttons-container button {
+  background-color: #7ae30b;
+  color: #141314;
+  height: 2.3rem;
+  border: none;
+  border-radius: 6px;
+  width: 9rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+.add-task-modal .add-task-container .buttons-container :hover {
+  cursor: pointer;
+  background-color: #444444;
+  color: #7ae30b;
+  transition: 0.5s;
+}
+
+.task {
+  display: flex;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-around;
+  background-color: #444444;
+  border-top: 2px solid #141314;
+}
+.task h3 {
+  width: 100px;
+  height: 18px;
+  overflow: hidden;
+  font-size: 18px;
+  text-overflow: ellipsis;
+}
+.task .task-controllers .icon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.task .task-controllers.icon:nth-child(1) {
+  padding-left: 0px;
+}
+
 .tasks-screen {
   height: 80vh;
   display: flex;
@@ -297,155 +462,4 @@
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-container {
   height: 100%;
   overflow-y: auto;
-}
-
-.drawerOpen {
-  position: relative;
-  height: 80vh;
-  width: 200px;
-  background-color: #444444;
-  text-align: center;
-}
-.drawerOpen .burguer-icon {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  cursor: pointer;
-}
-.drawerOpen h1 {
-  margin-top: 80px;
-  color: #eee;
-}
-.drawerOpen ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  color: #eee;
-}
-
-.drawerClosed {
-  height: 80vh;
-}
-.drawerClosed .burguer-icon {
-  margin: 20px;
-  color: #7ae30b;
-  cursor: pointer;
-}
-.drawerClosed h1 {
-  margin-top: 80px;
-  display: none;
-  color: #eee;
-}
-.drawerClosed ul {
-  display: none;
-  color: #eee;
-}
-
-.task {
-  display: flex;
-  display: flex;
-  align-items: center;
-  width: 300px;
-  justify-content: space-around;
-  background-color: #444444;
-  border-top: 2px solid #141314;
-}
-
-.add-task-modal {
-  background-color: #141314;
-}
-.add-task-modal .add-task-container {
-  position: relative;
-  height: 500px;
-  border: solid #7ae30b 2px;
-  border-radius: 6px;
-}
-.add-task-modal .add-task-container h1 {
-  color: #7ae30b;
-  color: #eee;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-.add-task-modal .add-task-container .id-input-container {
-  margin-top: 60px;
-  margin-left: 20px;
-  align-items: center;
-  display: flex;
-}
-.add-task-modal .add-task-container .id-input-container p {
-  padding-right: 48px;
-  color: #eee;
-  width: 100px;
-}
-.add-task-modal .add-task-container .id-input-container input {
-  background-color: #444444;
-  color: #eee;
-  border-radius: 10px;
-  border: none;
-  height: 30px;
-  padding: 10px;
-  width: 300px;
-}
-.add-task-modal .add-task-container .name-input-container {
-  margin-top: 20px;
-  margin-left: 20px;
-  align-items: center;
-  display: flex;
-}
-.add-task-modal .add-task-container .name-input-container p {
-  color: #eee;
-  width: 100px;
-}
-.add-task-modal .add-task-container .name-input-container input {
-  background-color: #444444;
-  color: #eee;
-  border-radius: 10px;
-  border: none;
-  height: 30px;
-  padding: 10px;
-  width: 300px;
-}
-.add-task-modal .add-task-container .description-input-container {
-  margin-top: 20px;
-  margin-left: 20px;
-  align-items: center;
-  display: flex;
-}
-.add-task-modal .add-task-container .description-input-container p {
-  color: #eee;
-  width: 100px;
-}
-.add-task-modal .add-task-container .description-input-container textarea {
-  margin-top: 5px;
-  padding: 10px;
-  width: 300px;
-  height: 80px;
-  background-color: #444444;
-  color: #eee;
-  border-radius: 10px;
-  border: none;
-  resize: none;
-}
-.add-task-modal .add-task-container .buttons-container {
-  display: flex;
-  margin-top: 130px;
-  margin-left: 160px;
-  margin-right: 20px;
-}
-.add-task-modal .add-task-container .buttons-container button {
-  background-color: #7ae30b;
-  color: #141314;
-  height: 2.3rem;
-  border: none;
-  border-radius: 6px;
-  width: 9rem;
-  font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
-  margin-left: 20px;
-}
-.add-task-modal .add-task-container .buttons-container :hover {
-  cursor: pointer;
-  background-color: #444444;
-  color: #7ae30b;
-  transition: 0.5s;
 }/*# sourceMappingURL=index.css.map */

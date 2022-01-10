@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+
 export default function AddTaskModal(props) {
 
     const [fields, setFields] = useState({})
@@ -32,17 +33,14 @@ export default function AddTaskModal(props) {
         try {
             const newTask = await api.put('/addTask', { name, description, situation })
             toast.success(newTask.data.message, getToastConfig())
+            await props.refreshTasks()
+            closeModal()
         } catch (error) {
             toast.error(error.response.data.message, getToastConfig())
         }
-        await props.fetchTasks
-
-        closeModal()
-        
     }
 
-
-    function closeModal() {
+    async function closeModal() {
         setFields({})
         props.onHide()
 
