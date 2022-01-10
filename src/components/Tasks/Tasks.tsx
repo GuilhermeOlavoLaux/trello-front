@@ -20,7 +20,7 @@ export default function Tasks() {
 
   const [modalShow, setModalShow] = useState(false)
 
-  const [taskSituation, setTaskSituation] = useState([''])
+  const [taskSituation, setTaskSituation] = useState('')
 
   async function fetchTasks() {
     const { data } = await api.get('/tasks')
@@ -71,12 +71,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation(['to-do', 'A fazer'])
+                    setTaskSituation('A fazer')
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='to-do-container'>{separateTasks('to-do')}</div>
+              <div className='to-do-container'>{separateTasks('A fazer')}</div>
             </div>
 
             <div className='in-progress'>
@@ -89,12 +89,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation(['in-progress', 'Em andamento'])
+                    setTaskSituation('Em andamento')
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='in-progress-container'>{separateTasks('in-progress')}</div>
+              <div className='in-progress-container'>{separateTasks('Em andamento')}</div>
             </div>
 
             <div className='completed'>
@@ -107,12 +107,12 @@ export default function Tasks() {
                   className='plus-icon'
                   onClick={() => {
                     setModalShow(true)
-                    setTaskSituation(['completed', 'Completas'])
+                    setTaskSituation('Completa')
                   }}
                 ></FontAwesomeIcon>
               </div>
 
-              <div className='completed-container'>{separateTasks('completed')}</div>
+              <div className='completed-container'>{separateTasks('Completa')}</div>
             </div>
           </div>
         </Fragment>

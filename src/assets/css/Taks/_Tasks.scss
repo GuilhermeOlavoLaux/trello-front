@@ -24,17 +24,16 @@
       }
 
       .tasks-container {
-        display: flex;
         width: 100%;
+        display: flex;
         justify-content: space-evenly;
-        overflow: hidden;
         align-items: center;
 
         .plus-icon {
           cursor: pointer;
         }
         .to-do {
-          height: 400px;
+          height: 45vh;
           background-color: $grey-200;
           min-width: 300px;
           border-radius: 10px;
@@ -59,7 +58,7 @@
         }
 
         .in-progress {
-          height: 400px;
+          height: 45vh;
           background-color: $grey-200;
           border-radius: 10px;
           min-width: 300px;
@@ -83,7 +82,7 @@
           }
         }
         .completed {
-          height: 400px;
+          height: 45vh;
           background-color: $grey-200;
           border-radius: 10px;
           min-width: 300px;

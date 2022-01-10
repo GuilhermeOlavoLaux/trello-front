@@ -344,6 +344,7 @@
   justify-content: space-around;
   background-color: #444444;
   border-top: 2px solid #141314;
+  height: 80px;
 }
 .task h3 {
   width: 100px;
@@ -385,17 +386,16 @@
   margin-bottom: 50px;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-evenly;
-  overflow: hidden;
   align-items: center;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .plus-icon {
   cursor: pointer;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do {
-  height: 400px;
+  height: 45vh;
   background-color: #444444;
   min-width: 300px;
   border-radius: 10px;
@@ -418,7 +418,7 @@
   overflow-y: auto;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress {
-  height: 400px;
+  height: 45vh;
   background-color: #444444;
   border-radius: 10px;
   min-width: 300px;
@@ -441,7 +441,7 @@
   overflow-y: auto;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed {
-  height: 400px;
+  height: 45vh;
   background-color: #444444;
   border-radius: 10px;
   min-width: 300px;

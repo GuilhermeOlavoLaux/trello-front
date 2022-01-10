@@ -28,7 +28,7 @@ export default function AddTaskModal(props) {
     async function saveNewTask() {
         const { name, description } = fields
 
-        const situation = props.situation[0]
+        const situation = props.situation
 
         try {
             const newTask = await api.put('/addTask', { name, description, situation })
@@ -45,7 +45,6 @@ export default function AddTaskModal(props) {
         props.onHide()
 
     }
-
 
     return (
         <>
@@ -69,7 +68,7 @@ export default function AddTaskModal(props) {
             >
                 <Modal.Body className='add-task-modal'>
                     <div className='add-task-container'>
-                        <h1>Adicionar Tarefa: {props.situation[1]}</h1>
+                        <h1>Adicionar Tarefa: {props.situation}</h1>
 
                         <div className='name-input-container'>
                             <p>Nome:</p>
