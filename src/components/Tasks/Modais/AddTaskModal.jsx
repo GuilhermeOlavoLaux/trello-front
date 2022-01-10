@@ -82,8 +82,6 @@ export default function AddTaskModal(props) {
                             <textarea onChange={(event) => setFields({ ...fields, description: event.target.value })}></textarea>
                         </div>
 
-
-
                         <div className='buttons-container'>
                             <Button onClick={closeModal}>Close</Button>
                             <Button onClick={saveNewTask}>Salvar</Button>

@@ -4,6 +4,8 @@ import { faEdit, faEye } from '@fortawesome/free-solid-svg-icons'
 
 import ViewTaskModal from './Modais/ViewTaskModal'
 
+import EditTaskModal from './Modais/EditTaskModal'
+
 interface ITask {
   name: string
   description: string
@@ -12,6 +14,9 @@ interface ITask {
 
 export default function Task(props: ITask) {
   const [modalShow, setModalShow] = useState(false)
+
+  const [modalShow2, setModalShow2] = useState(false)
+
 
   return (
     <Fragment>
@@ -23,20 +28,26 @@ export default function Task(props: ITask) {
         situation={props.situation}
       />
 
-      <div className='task'>
+      <EditTaskModal
+        show={modalShow2}
+        onHide={() => setModalShow2(false)}
+        title={props.name}
+        description={props.description}
+        situation={props.situation}
+      />
+
+      <div className='task' onClick={() => setModalShow(true)}>
         <div className='task-container'>
           <h3>{props.name}</h3>
         </div>
 
         <div className='task-controllers'>
           <FontAwesomeIcon
-            icon={faEye}
+            icon={faEdit}
             size='lg'
             className='icon'
-            onClick={() => setModalShow(true)}
+            onClick={() => setModalShow2(true)}
           ></FontAwesomeIcon>
-
-          <FontAwesomeIcon icon={faEdit} size='lg' className='icon'></FontAwesomeIcon>
         </div>
       </div>
     </Fragment>

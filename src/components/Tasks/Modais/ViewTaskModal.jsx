@@ -1,6 +1,4 @@
-import { Button, Modal } from "react-bootstrap";
-import { useEffect, useState } from 'react'
-import { api } from '../../../api/apiRotes'
+import { Modal } from "react-bootstrap";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,17 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function ViewTaskModal(props) {
 
-    function getToastConfig() {
-        return {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false,
-            progress: undefined
-        }
-    }
 
     return (
         <>
