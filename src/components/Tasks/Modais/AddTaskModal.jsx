@@ -1,10 +1,11 @@
 import { Button, Modal } from "react-bootstrap";
-import { useEffect, useState } from 'react'
-import { api } from '../../api/apiRotes'
+import { useState } from 'react'
+import { api } from '../../../api/apiRotes'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { toast, ToastContainer } from 'react-toastify'
+
 import 'react-toastify/dist/ReactToastify.css'
 
 

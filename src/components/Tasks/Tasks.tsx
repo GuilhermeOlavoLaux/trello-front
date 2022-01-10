@@ -7,7 +7,7 @@ import Task from './Task'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import AddTaskModal from './AddTaskModal'
+import AddTaskModal from './Modais/AddTaskModal'
 
 interface ITask {
   name: string
@@ -27,11 +27,8 @@ export default function Tasks() {
     setTasks(data.userTasks)
   }
 
-
-
   useEffect(() => {
     fetchTasks()
-
   }, [])
 
   function separateTasks(taskSituationType: string) {

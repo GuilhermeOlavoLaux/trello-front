@@ -1,8 +1,8 @@
 import { Fragment, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faEye, faSave } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faEye } from '@fortawesome/free-solid-svg-icons'
 
-import ViewTaskModal from './ViewTaskModal'
+import ViewTaskModal from './Modais/ViewTaskModal'
 
 interface ITask {
   name: string
@@ -29,11 +29,14 @@ export default function Task(props: ITask) {
         </div>
 
         <div className='task-controllers'>
-          <FontAwesomeIcon icon={faEye} size='lg' className='icon' onClick={() => setModalShow(true)}></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={faEye}
+            size='lg'
+            className='icon'
+            onClick={() => setModalShow(true)}
+          ></FontAwesomeIcon>
 
           <FontAwesomeIcon icon={faEdit} size='lg' className='icon'></FontAwesomeIcon>
-
-          <FontAwesomeIcon icon={faSave} size='lg' className='icon'></FontAwesomeIcon>
         </div>
       </div>
     </Fragment>

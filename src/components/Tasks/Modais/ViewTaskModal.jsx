@@ -1,6 +1,6 @@
 import { Button, Modal } from "react-bootstrap";
 import { useEffect, useState } from 'react'
-import { api } from '../../api/apiRotes'
+import { api } from '../../../api/apiRotes'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

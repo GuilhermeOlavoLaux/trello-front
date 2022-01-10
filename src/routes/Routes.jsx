@@ -3,7 +3,7 @@ import Register from '../components/Register'
 import Login from '../components/Login'
 import Teste from '../components/Teste'
 import ProtectedRoutes from './ProtectedRoutes'
-import Tasks from '../components/Tasks/Tasks'
+import Tasks from '../components/Tasks/Tasks.tsx'
 
 export default function AppRoutes() {
 
