@@ -17,7 +17,6 @@ export default function Task(props: ITask) {
 
   const [modalShow2, setModalShow2] = useState(false)
 
-
   return (
     <Fragment>
       <ViewTaskModal
@@ -36,9 +35,9 @@ export default function Task(props: ITask) {
         situation={props.situation}
       />
 
-      <div className='task' onClick={() => setModalShow(true)}>
+      <div className='task'>
         <div className='task-container'>
-          <h3>{props.name}</h3>
+          <h3 onClick={() => setModalShow(true)}>{props.name}</h3>
         </div>
 
         <div className='task-controllers'>

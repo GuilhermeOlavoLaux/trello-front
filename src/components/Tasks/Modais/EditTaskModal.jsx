@@ -45,22 +45,27 @@ export default function ViewTaskModal(props) {
                 centered
             >
                 <Modal.Body className='view-task-modal'>
-                    <h1>Tarefa</h1>
 
-                    <h4>Título: </h4>
-                    <input></input>
+                    <div className='view-task-container'>
+
+                        <h1>Tarefa</h1>
+
+                        <h4>Título: </h4>
+                        <input></input>
 
 
-                    <h4>Descrição: </h4>
-                    <textarea></textarea>
+                        <h4>Descrição: </h4>
+                        <textarea></textarea>
 
 
-                    <h4>Situação:</h4>
+                        <h4>Situação:</h4>
 
-                    <select name="situations">
-                        <option value={props.situation}>{props.situation}</option>
-                        {renderSituationOptions()}
-                    </select>
+                        <select name="situations">
+                            <option value={props.situation}>{props.situation}</option>
+                            {renderSituationOptions()}
+                        </select>
+
+                    </div>
 
                 </Modal.Body>
             </Modal>
