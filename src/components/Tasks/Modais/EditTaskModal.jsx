@@ -8,19 +8,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function ViewTaskModal(props) {
 
+    const [title, setTitle] = useState(props.title)
+    const [description, setDescription] = useState(props.description)
+    const [situation, setSituation] = useState(props.situation)
 
 
-    function getToastConfig() {
-        return {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false,
-            progress: undefined
-        }
-    }
+
+    // function getToastConfig() {
+    //     return {
+    //         position: 'top-right',
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: false,
+    //         progress: undefined
+    //     }
+    // }
 
 
     function renderSituationOptions() {
@@ -51,16 +55,16 @@ export default function ViewTaskModal(props) {
                         <h1>Tarefa</h1>
 
                         <h4>Título: </h4>
-                        <input></input>
+                        <input value={title} onChange={(e) => setTitle(e.target.value)}></input>
 
 
                         <h4>Descrição: </h4>
-                        <textarea></textarea>
+                        <textarea value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
 
 
                         <h4>Situação:</h4>
 
-                        <select name="situations">
+                        <select name="situations" value={situation} onChange={(e) => setSituation(e.target.value)}>
                             <option value={props.situation}>{props.situation}</option>
                             {renderSituationOptions()}
                         </select>
