@@ -2,29 +2,44 @@ import { Button, Modal } from "react-bootstrap";
 import { useEffect, useState } from 'react'
 import { api } from '../../../api/apiRotes'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { toast, ToastContainer } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
-export default function ViewTaskModal(props) {
+export default function EditTaskModal(props) {
 
-    const [title, setTitle] = useState(props.title)
+    const [id, setId] = useState(props._id)
+    const [name, setName] = useState(props.title)
     const [description, setDescription] = useState(props.description)
     const [situation, setSituation] = useState(props.situation)
 
 
+    function getToastConfig() {
+        return {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined
+        }
+    }
 
-    // function getToastConfig() {
-    //     return {
-    //         position: 'top-right',
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: false,
-    //         progress: undefined
-    //     }
-    // }
+    async function updateTask() {
+        try {
+            const newTask = await api.put('/updateTask', { id, name, description, situation })
+
+            toast.success(newTask.data.message, getToastConfig())
+            props.onHide()
+        } catch (error) {
+            toast.error(error.response.data.message, getToastConfig())
+        }
+    }
+
+
 
 
     function renderSituationOptions() {
@@ -48,14 +63,16 @@ export default function ViewTaskModal(props) {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >
-                <Modal.Body className='view-task-modal'>
 
-                    <div className='view-task-container'>
+                <Modal.Header closeButton className='edit-task-header'>
+                    <h1>{props.title}</h1>
+                </Modal.Header>
 
-                        <h1>Tarefa</h1>
+                <Modal.Body className='edit-task-modal'>
 
-                        <h4>Título: </h4>
-                        <input value={title} onChange={(e) => setTitle(e.target.value)}></input>
+                    <div className='edit-task-container'>
+
+                        <input value={name} onChange={(e) => setName(e.target.value)}></input>
 
 
                         <h4>Descrição: </h4>
@@ -71,7 +88,12 @@ export default function ViewTaskModal(props) {
 
                     </div>
 
+
                 </Modal.Body>
+
+                <Modal.Footer className='edit-task-footer'>
+                    <Button className='default-button' onClick={() => updateTask()}>Editar</Button>
+                </Modal.Footer>
             </Modal>
         </>
     );

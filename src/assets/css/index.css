@@ -505,4 +505,60 @@
 .view-task-modal .view-task-container .situation-container p {
   margin: 0px;
   margin-left: 30px;
+}
+
+.edit-task-header {
+  background-color: #141314;
+  border: 0px;
+}
+.edit-task-header h1 {
+  color: #eee;
+  max-width: 600px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.edit-task-header button {
+  background-color: #7ae30b;
+}
+
+.edit-task-modal {
+  background-color: #141314;
+}
+.edit-task-modal .edit-task-container {
+  position: relative;
+  height: 500px;
+  border: solid #7ae30b 2px;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.edit-task-modal .edit-task-container h1 {
+  color: #7ae30b;
+  color: #eee;
+}
+.edit-task-modal .edit-task-container h4 {
+  margin-top: 40px;
+  color: #7ae30b;
+  color: #eee;
+}
+.edit-task-modal .edit-task-container input {
+  background-color: #444444;
+  color: #eee;
+  border-radius: 10px;
+  width: 350px;
+  padding: 10px;
+}
+.edit-task-modal .edit-task-container textarea {
+  background-color: #444444;
+  color: #eee;
+  border-radius: 10px;
+  border: none;
+  height: 80px;
+  width: 350px;
+  padding: 10px;
+}
+
+.edit-task-footer {
+  background-color: #141314;
+  border: 0px;
 }/*# sourceMappingURL=index.css.map */

@@ -10,6 +10,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import AddTaskModal from './Modais/AddTaskModal'
 
 interface ITask {
+  _id: string
   name: string
   description: string
   situation: string
@@ -36,7 +37,7 @@ export default function Tasks() {
       if (task.situation === taskSituationType) {
         return (
           <>
-            <Task name={task.name} description={task.description} situation={task.situation}></Task>
+            <Task _id={task._id} name={task.name} description={task.description} situation={task.situation}></Task>
           </>
         )
       } else {

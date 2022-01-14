@@ -7,6 +7,7 @@ import ViewTaskModal from './Modais/ViewTaskModal'
 import EditTaskModal from './Modais/EditTaskModal'
 
 interface ITask {
+  _id: string
   name: string
   description: string
   situation: string
@@ -30,6 +31,7 @@ export default function Task(props: ITask) {
       <EditTaskModal
         show={modalShow2}
         onHide={() => setModalShow2(false)}
+        _id={props._id}
         title={props.name}
         description={props.description}
         situation={props.situation}
