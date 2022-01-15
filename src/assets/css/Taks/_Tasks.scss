@@ -1,5 +1,5 @@
 .tasks-screen {
-  height: 80vh;
+  height: 100vh;
   display: flex;
 
   .tasks-screen-container {
@@ -7,6 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      color: $white-text;
+      margin-bottom: 26px;
+    }
 
     .tasks {
       color: $white-text;
@@ -28,7 +34,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
+        height: 100%;
         .plus-icon {
           cursor: pointer;
         }

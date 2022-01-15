@@ -1,14 +1,19 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useContext } from 'react'
+import { Context } from './context/AuthContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function Drawer() {
   const [drawerFlag, setDrawerFlag] = useState(true)
 
+  const navigate = useNavigate()
+
   function handleModalOpening() {
-      setDrawerFlag(!drawerFlag)
+    setDrawerFlag(!drawerFlag)
   }
 
+  let { handleLogout } = useContext(Context)
 
   return (
     <Fragment>
@@ -20,12 +25,20 @@ export default function Drawer() {
           onClick={() => handleModalOpening()}
         ></FontAwesomeIcon>
 
-        <h1>Trello</h1>
+        <h1 onClick={() => navigate(`/tasks`)}>Trello</h1>
 
         <ul>
-          <li>A fazer</li>
-          <li>Em andamento</li>
-          <li>Concluidas</li>
+          <li onClick={() => navigate(`/toDoTasks`)}>A fazer</li>
+          <li onClick={() => navigate(`/inProgress`)}>Em andamento</li>
+          <li onClick={() => navigate(`/completedTasks`)}>Completas</li>
+          <li
+            onClick={() => {
+              handleLogout()
+              navigate(`/`)
+            }}
+          >
+            Sair
+          </li>
         </ul>
       </div>
     </Fragment>

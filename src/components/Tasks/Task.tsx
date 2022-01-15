@@ -2,9 +2,9 @@ import { Fragment, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faEye } from '@fortawesome/free-solid-svg-icons'
 
-import ViewTaskModal from './Modais/ViewTaskModal'
+import ViewTaskModal from './Modals/ViewTaskModal'
 
-import EditTaskModal from './Modais/EditTaskModal'
+import EditTaskModal from './Modals/EditTaskModal'
 
 interface ITask {
   _id: string

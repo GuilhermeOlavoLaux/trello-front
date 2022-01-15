@@ -26,7 +26,7 @@ export default function Login() {
 
   useEffect(() => {
     if (authenticated) {
-      navigate('/teste')
+      navigate('/tasks')
     }
   }, [authenticated])
 

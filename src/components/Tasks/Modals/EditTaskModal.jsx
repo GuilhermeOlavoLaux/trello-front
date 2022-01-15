@@ -65,12 +65,14 @@ export default function EditTaskModal(props) {
             >
 
                 <Modal.Header closeButton className='edit-task-header'>
+
                     <h1>{props.title}</h1>
                 </Modal.Header>
 
                 <Modal.Body className='edit-task-modal'>
 
                     <div className='edit-task-container'>
+                        <h4>Nome: </h4>
 
                         <input value={name} onChange={(e) => setName(e.target.value)}></input>
 
@@ -79,7 +81,7 @@ export default function EditTaskModal(props) {
                         <textarea value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
 
 
-                        <h4>Situação:</h4>
+                        <h4>Situação:</h4>n
 
                         <select name="situations" value={situation} onChange={(e) => setSituation(e.target.value)}>
                             <option value={props.situation}>{props.situation}</option>

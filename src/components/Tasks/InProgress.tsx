@@ -16,7 +16,7 @@ interface ITask {
   situation: string
 }
 
-export default function Tasks() {
+export default function InProgressTasks() {
   const [tasks, setTasks] = useState([])
 
   const [modalShow, setModalShow] = useState(false)
@@ -64,27 +64,9 @@ export default function Tasks() {
           />
 
           <div className='tasks-container'>
-            <div className='to-do'>
-              <div className='to-do-tittle'>
-                <h4>A fazer</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('A fazer')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
-
-              <div className='to-do-container'>{separateTasks('A fazer')}</div>
-            </div>
-
             <div className='in-progress'>
               <div className='in-progress-tittle'>
-                <h4>Em andamento</h4>
+                <h4>Em Progresso</h4>
                 <FontAwesomeIcon
                   icon={faPlus}
                   size='lg'
@@ -98,24 +80,6 @@ export default function Tasks() {
               </div>
 
               <div className='in-progress-container'>{separateTasks('Em andamento')}</div>
-            </div>
-
-            <div className='completed'>
-              <div className='completed-tittle'>
-                <h4>Completas</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('Completa')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
-
-              <div className='completed-container'>{separateTasks('Completa')}</div>
             </div>
           </div>
         </Fragment>
@@ -131,7 +95,7 @@ export default function Tasks() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <h1>Suas tarefas</h1>
+        <h1>Tarefas Em Progresso</h1>
           <div className='tasks'>{renderTasks()}</div>
         </div>
       </div>

@@ -197,10 +197,9 @@
 
 .drawerOpen {
   position: relative;
-  height: 80vh;
-  width: 200px;
+  height: 100vh;
+  width: 280px;
   background-color: #444444;
-  text-align: center;
 }
 .drawerOpen .burguer-icon {
   position: absolute;
@@ -210,13 +209,21 @@
 }
 .drawerOpen h1 {
   margin-top: 80px;
+  margin-bottom: 60px;
   color: #eee;
+  padding-left: 20px;
 }
 .drawerOpen ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
   color: #eee;
+}
+.drawerOpen li {
+  cursor: pointer;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .drawerClosed {
@@ -363,7 +370,7 @@
 }
 
 .tasks-screen {
-  height: 80vh;
+  height: 100vh;
   display: flex;
 }
 .tasks-screen .tasks-screen-container {
@@ -371,6 +378,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.tasks-screen .tasks-screen-container h1 {
+  color: #eee;
+  margin-bottom: 26px;
 }
 .tasks-screen .tasks-screen-container .tasks {
   color: #eee;
@@ -391,6 +403,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 100%;
 }
 .tasks-screen .tasks-screen-container .tasks .tasks-container .plus-icon {
   cursor: pointer;
