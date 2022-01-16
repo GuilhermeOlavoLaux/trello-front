@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext } from 'react'
+import { Fragment, useState, useContext, useEffect } from 'react'
 import Drawer from '../Drawer'
 import Task from './Task'
 import { TasksContext } from '../context/TasksContext'
@@ -20,6 +20,10 @@ export default function InProgressTasks() {
   const [modalShow, setModalShow] = useState(false)
 
   const [taskSituation, setTaskSituation] = useState('')
+
+  useEffect(() => {
+    fetchTasks()
+}, [])
 
   function separateTasks(taskSituationType: string) {
     const tasksMap = tasks.map((task: ITask) => {

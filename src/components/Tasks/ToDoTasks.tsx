@@ -1,9 +1,7 @@
-import { Fragment, useEffect, useState } from 'react'
-import Footer from '../Footer'
-import Header from '../Header'
-import { api } from '../../api/apiRotes'
+import { Fragment, useContext, useState, useEffect } from 'react'
 import Drawer from '../Drawer'
 import Task from './Task'
+import { TasksContext } from '../context/TasksContext'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -17,20 +15,15 @@ interface ITask {
 }
 
 export default function ToDoTasks() {
-  const [tasks, setTasks] = useState([])
+  const { fetchTasks, tasks } = useContext(TasksContext)
 
   const [modalShow, setModalShow] = useState(false)
 
   const [taskSituation, setTaskSituation] = useState('')
 
-  async function fetchTasks() {
-    const { data } = await api.get('/tasks')
-    setTasks(data.userTasks)
-  }
-
   useEffect(() => {
     fetchTasks()
-  }, [])
+}, [])
 
   function separateTasks(taskSituationType: string) {
     const tasksMap = tasks.map((task: ITask) => {

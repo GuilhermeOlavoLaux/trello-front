@@ -30,7 +30,6 @@ export default function DeleteTaskModal(props) {
 
             const deletedTask = await api.put(`deleteTask/${props._id}`, {})
 
-            console.log(deletedTask)
             toast.success(deletedTask.data.message, getToastConfig())
             fetchTasks()
             props.onHide()

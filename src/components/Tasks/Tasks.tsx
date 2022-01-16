@@ -1,7 +1,8 @@
-import { Fragment, useState, useContext } from 'react'
+import { Fragment, useState, useContext, useEffect } from 'react'
 import Drawer from '../Drawer'
 import Task from './Task'
 import { TasksContext } from '../context/TasksContext'
+import { api } from '../../api/apiRotes'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +20,12 @@ export default function Tasks() {
 
   const [taskSituation, setTaskSituation] = useState('')
 
-  const { fetchTasks, tasks } = useContext(TasksContext)
+  const { tasks, setTasks, fetchTasks } = useContext(TasksContext)
+
+  useEffect(() => {
+    setTasks([{}])
+    fetchTasks()
+  }, [])
 
   function separateTasks(taskSituationType: string) {
     const tasksMap = tasks.map((task: ITask) => {
