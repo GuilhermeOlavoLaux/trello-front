@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import useAuth from "./hooks/useAuth";
 
-const Context = createContext();
+const AuthContext = createContext();
 
 function AuthProvider({ children }) {
 
@@ -13,13 +13,13 @@ function AuthProvider({ children }) {
     else {
 
         return (
-            <Context.Provider value={{ authenticated, setAuthenticated, handleLogin, handleLogout }}>
+            <AuthContext.Provider value={{ authenticated, setAuthenticated, handleLogin, handleLogout }}>
                 {children}
-            </Context.Provider>
+            </AuthContext.Provider>
         )
     }
 }
 
 
 
-export { Context, AuthProvider }
+export { AuthContext, AuthProvider }

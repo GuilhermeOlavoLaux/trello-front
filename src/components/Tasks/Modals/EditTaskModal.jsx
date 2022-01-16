@@ -1,8 +1,10 @@
 import { Button, Modal } from "react-bootstrap";
-import { useEffect, useState } from 'react'
+import { useState, useContext } from 'react'
 import { api } from '../../../api/apiRotes'
+import { TasksContext } from '../../context/TasksContext'
 
-import { toast, ToastContainer } from 'react-toastify'
+
+import { toast } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -14,6 +16,9 @@ export default function EditTaskModal(props) {
     const [name, setName] = useState(props.title)
     const [description, setDescription] = useState(props.description)
     const [situation, setSituation] = useState(props.situation)
+
+    const { fetchTasks } = useContext(TasksContext)
+
 
 
     function getToastConfig() {
@@ -33,6 +38,7 @@ export default function EditTaskModal(props) {
             const newTask = await api.put('/updateTask', { id, name, description, situation })
 
             toast.success(newTask.data.message, getToastConfig())
+            fetchTasks()
             props.onHide()
         } catch (error) {
             toast.error(error.response.data.message, getToastConfig())

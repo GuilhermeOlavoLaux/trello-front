@@ -1,0 +1,47 @@
+.delete-task-header {
+    background-color: $grey-100;
+    border: 0px;
+  
+    button {
+      background-color: $green-light;
+    }
+  }
+  
+  .delete-task-modal {
+    background-color: $grey-100;
+  
+    .delete-task-container {
+      height: 500px;
+      border: solid $green-light 2px;
+      border-radius: 6px;
+      padding-left: 20px;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    
+      h4{
+          color: $white-text;
+          text-align: center;
+      }
+
+      .buttons-container{
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+
+          button:nth-child(2){
+              margin-left: 20px;
+          }
+      }
+
+    }
+  }
+  .delete-task-footer {
+    background-color: $grey-100;
+    border: 0px;
+  }
+  

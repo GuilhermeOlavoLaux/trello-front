@@ -1,5 +1,5 @@
 import { Fragment, useState, useContext } from 'react'
-import { Context } from './context/AuthContext'
+import { AuthContext } from './context/AuthContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
@@ -13,7 +13,7 @@ export default function Drawer() {
     setDrawerFlag(!drawerFlag)
   }
 
-  let { handleLogout } = useContext(Context)
+  let { handleLogout } = useContext(AuthContext)
 
   return (
     <Fragment>
@@ -29,7 +29,7 @@ export default function Drawer() {
 
         <ul>
           <li onClick={() => navigate(`/toDoTasks`)}>A fazer</li>
-          <li onClick={() => navigate(`/inProgress`)}>Em andamento</li>
+          <li onClick={() => navigate(`/inProgress`)}>Em Progresso</li>
           <li onClick={() => navigate(`/completedTasks`)}>Completas</li>
           <li
             onClick={() => {

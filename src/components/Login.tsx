@@ -5,7 +5,7 @@ import Apresentation from './Apresentation'
 import Footer from './Footer'
 import Header from './Header'
 
-import { Context } from './context/AuthContext'
+import { AuthContext } from './context/AuthContext'
 import { ToastContainer } from 'react-toastify'
 
 interface IFields {
@@ -20,7 +20,7 @@ export default function Login() {
 
   const navigate = useNavigate()
 
-  const { authenticated, handleLogin } = useContext(Context)
+  const { authenticated, handleLogin } = useContext(AuthContext)
   
   
 

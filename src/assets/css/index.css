@@ -574,4 +574,45 @@
 .edit-task-footer {
   background-color: #141314;
   border: 0px;
+}
+
+.delete-task-header {
+  background-color: #141314;
+  border: 0px;
+}
+.delete-task-header button {
+  background-color: #7ae30b;
+}
+
+.delete-task-modal {
+  background-color: #141314;
+}
+.delete-task-modal .delete-task-container {
+  height: 500px;
+  border: solid #7ae30b 2px;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.delete-task-modal .delete-task-container h4 {
+  color: #eee;
+  text-align: center;
+}
+.delete-task-modal .delete-task-container .buttons-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-task-modal .delete-task-container .buttons-container button:nth-child(2) {
+  margin-left: 20px;
+}
+
+.delete-task-footer {
+  background-color: #141314;
+  border: 0px;
 }/*# sourceMappingURL=index.css.map */
