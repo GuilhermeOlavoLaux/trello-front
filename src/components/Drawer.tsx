@@ -29,7 +29,7 @@ export default function Drawer() {
 
         <ul>
           <li onClick={() => navigate(`/toDoTasks`)}>A fazer</li>
-          <li onClick={() => navigate(`/inProgress`)}>Em Progresso</li>
+          <li onClick={() => navigate(`/inProgress`)}>Em Andamento</li>
           <li onClick={() => navigate(`/completedTasks`)}>Completas</li>
           <li onClick={() => navigate(`/editProfile`)}>Editar Perfil</li>
 

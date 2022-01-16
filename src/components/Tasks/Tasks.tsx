@@ -2,7 +2,6 @@ import { Fragment, useState, useContext, useEffect } from 'react'
 import Drawer from '../Drawer'
 import Task from './Task'
 import { TasksContext } from '../context/TasksContext'
-import { api } from '../../api/apiRotes'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'

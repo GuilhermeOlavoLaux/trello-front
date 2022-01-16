@@ -59,7 +59,7 @@ export default function InProgressTasks() {
           <div className='tasks-container'>
             <div className='in-progress'>
               <div className='in-progress-tittle'>
-                <h4>Em Progresso</h4>
+                <h4>Em Andamento</h4>
                 <FontAwesomeIcon
                   icon={faPlus}
                   size='lg'
@@ -88,7 +88,7 @@ export default function InProgressTasks() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <h1>Tarefas Em Progresso</h1>
+          <h1>Tarefas Em Andamento</h1>
           <div className='tasks'>{renderTasks()}</div>
         </div>
       </div>
