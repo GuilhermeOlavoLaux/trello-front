@@ -1,0 +1,42 @@
+.edit-profile-screen {
+  height: 100vh;
+  display: flex;
+
+  .edit-profile-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .edit-profile-background {
+      color: $white-text;
+      overflow: hidden;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $green-light;
+      background-color: $grey-100;
+      border-radius: 6px;
+      height: 85%;
+      width: 80%;
+      min-width: 1000px;
+
+      .edit-profile-fields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        p {
+          margin-top: 20px;
+          color: $white-text;
+          text-align: center;
+        }
+        button {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}

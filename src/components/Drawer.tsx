@@ -28,6 +28,7 @@ export default function Drawer() {
         <h1 onClick={() => navigate(`/tasks`)}>Trello</h1>
 
         <ul>
+          <li onClick={() => navigate(`/tasks`)}>Início</li>
           <li onClick={() => navigate(`/toDoTasks`)}>A fazer</li>
           <li onClick={() => navigate(`/inProgress`)}>Em Andamento</li>
           <li onClick={() => navigate(`/completedTasks`)}>Completas</li>

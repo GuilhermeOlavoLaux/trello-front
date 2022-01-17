@@ -1,0 +1,15 @@
+.edit-profile-screen {
+  height: 100vh;
+  display: flex;
+}
+.edit-profile-screen .edit-profile-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.edit-profile-screen .edit-profile-container h1 {
+  color: red;
+  margin-bottom: 26px;
+}/*# sourceMappingURL=EditProfile.css.map */

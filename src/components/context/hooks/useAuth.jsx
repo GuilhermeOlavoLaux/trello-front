@@ -30,6 +30,9 @@ export default function useAuth() {
 
             localStorage.setItem('token', JSON.stringify(token))
 
+            localStorage.setItem('userName', JSON.stringify(userName))
+
+
             api.defaults.headers.Authorization = `Bearer ${token}`
 
             setAuthenticated(true)
