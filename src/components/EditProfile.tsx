@@ -2,6 +2,11 @@ import { Fragment, useState } from 'react'
 import Drawer from './Drawer'
 import { api } from '../api/apiRotes'
 
+import { toast, ToastContainer } from 'react-toastify'
+import { ToastOptions } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
+
 export default function EditProfile() {
   //@ts-ignore
   const userName = JSON.parse(localStorage.getItem('userName'))
@@ -9,20 +14,37 @@ export default function EditProfile() {
   const [password, setPassword] = useState('')
   const [secondPassword, setSecondPassword] = useState('')
 
+  function getToastConfig(): ToastOptions {
+    return {
+      position: 'top-right',
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined
+    }
+  }
+
+  const settings = getToastConfig()
+
   async function handlePasswordUpdate() {
     if (password !== '' && secondPassword !== '' && password === secondPassword) {
       try {
-        const a = await api.put('/updatePassword', { password })
-
-        console.log(a)
-        window.alert('senha alterada parsero')
-      } catch (error) {}
+        const passwordUpdateRequest = await api.put('/updatePassword', { password })
+        toast.success(passwordUpdateRequest.data.message, settings)
+      } catch (error: any) {
+        toast.success(error.data.message, settings)
+      }
+    } else {
+      toast.error('Por favor, preencha os dois campos com a mesma senha', settings)
     }
   }
 
   return (
     <Fragment>
       <div className='edit-profile-screen'>
+        <ToastContainer />
         <Drawer></Drawer>
 
         <div className='edit-profile-container'>

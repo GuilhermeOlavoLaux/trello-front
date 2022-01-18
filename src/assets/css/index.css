@@ -656,4 +656,7 @@
 }
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields button {
   margin-top: 100px;
+}
+.edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields input {
+  width: 300px;
 }/*# sourceMappingURL=index.css.map */

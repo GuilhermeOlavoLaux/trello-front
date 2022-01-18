@@ -49,18 +49,8 @@ export default function AddTaskModal(props) {
 
     return (
         <>
-            <ToastContainer
-                position='top-right'
-                autoClose={4000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick={true}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
-            <ToastContainer />
+            <ToastContainer/>
+
             <Modal
                 {...props}
                 size="lg"
