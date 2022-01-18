@@ -151,22 +151,8 @@
   align-items: center;
   justify-content: space-around;
 }
-.footer .footer-container ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0px;
-}
-.footer .footer-container li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 20px;
-  cursor: pointer;
-}
-.footer .footer-container li:nth-child(3) {
-  padding-right: 0px;
+.footer .footer-container .footer-links a {
+  margin-right: 20px;
 }
 .footer .footer-container img {
   height: 40px;

@@ -8,20 +8,17 @@ export default function Footer() {
     <Fragment>
       <div className='footer'>
         <div className='footer-container'>
-          <ul>
-            <li>
-              <FontAwesomeIcon icon={faInstagram} size='lg' />
-              Instagram
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faLinkedin} size='lg' />
-              Linkedin
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faGithub} size='lg' />
-              GitHub
-            </li>
-          </ul>
+          <div className='footer-links'>
+            <a href='https://www.instagram.com/guilherme__laux/' target={'_blank'}>
+              <FontAwesomeIcon icon={faInstagram} size='lg' color='white' />
+            </a>
+            <a href='https://www.linkedin.com/in/guilherme-laux1999/' target={'_blank'}>
+              <FontAwesomeIcon icon={faLinkedin} size='lg' color='white' />
+            </a>
+            <a href='https://github.com/GuilhermeOlavoLaux' target={'_blank'}>
+              <FontAwesomeIcon icon={faGithub} size='lg' color='white' />
+            </a>
+          </div>
 
           <img
             src='https://cdn.discordapp.com/attachments/882783374060695582/923786814404304897/256x256bb.png'
