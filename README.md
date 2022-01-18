@@ -2,12 +2,6 @@
 
 Este projeto é um administrador de tarefas, como o Trello. Nele você poderá criar e editar um usuário, adicionar tarefas, editá las e excluí las. Esta é a parte do Front End, o Back End está aqui: https://github.com/GuilhermeOlavoLaux/trello-back
 
-## 🚀 Começando
-
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-Consulte **Implantação** para saber como implantar o projeto.
-
 
 ### 🔧 Instalação
 
