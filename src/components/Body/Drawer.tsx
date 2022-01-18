@@ -25,7 +25,10 @@ export default function Drawer() {
           onClick={() => handleModalOpening()}
         ></FontAwesomeIcon>
 
-        <h1 onClick={() => navigate(`/tasks`)}>Trello</h1>
+        <img
+          src='https://media.discordapp.net/attachments/882783374060695582/923692029282746368/trello-logo-blue.png'
+          alt='logo-trello'
+        />
 
         <ul>
           <li onClick={() => navigate(`/tasks`)}>Início</li>

@@ -1,6 +1,9 @@
 import { Fragment } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
+  const navigate = useNavigate()
+
   return (
     <Fragment>
       <div className='header'>
@@ -11,9 +14,8 @@ export default function Header() {
           />
 
           <ul>
-            <li>Inicio</li>
-            <li>Cadastro</li>
-            <li>Sobre</li>
+            <li onClick={() => navigate('/')}>Login</li>
+            <li onClick={() => navigate('/cadastro')}>Cadastro</li>
           </ul>
         </div>
       </div>
