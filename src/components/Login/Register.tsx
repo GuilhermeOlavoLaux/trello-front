@@ -1,44 +1,66 @@
-import { useState, ChangeEvent, Fragment, useContext, useEffect } from 'react'
+import { useState, ChangeEvent, Fragment } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Apresentation from './Apresentation'
-import Footer from './Footer'
-import Header from './Header'
+import Footer from '../Body/Footer'
+import Header from '../Body/Header'
 
-import { AuthContext } from './context/AuthContext'
-import { ToastContainer } from 'react-toastify'
+import { api } from '../../api/apiRotes'
 
 interface IFields {
   userName: string
   password: string
+  tasks: []
 }
 
+interface IToastConfig {
+  position: any
+  autoClose: number
+  hideProgressBar: boolean
+  closeOnClick: boolean
+  pauseOnHover: boolean
+  draggable: boolean
+  progress: any
+}
 
-
-export default function Login() {
+export default function Register() {
   const [fields, setFields] = useState<IFields>({} as IFields)
 
   const navigate = useNavigate()
 
-  const { authenticated, handleLogin } = useContext(AuthContext)
-  
-  
-
-  useEffect(() => {
-    if (authenticated) {
-      navigate('/tasks')
+  function getToastConfig(): IToastConfig {
+    return {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined
     }
-  }, [authenticated])
+  }
+
+  async function registerUser() {
+    const { userName, password } = fields
+
+    try {
+      const postUser = await api.post('/createUser', { userName, password })
+      toast.success(postUser.data.message, getToastConfig())
+    } catch (error: any) {
+      toast.error(error.response.data.error, getToastConfig())
+    }
+  }
 
   return (
     <Fragment>
-        <Header></Header>
-      <div className='login-screen'>
-        <div className='login'>
-          <div className='login-container'>
+      <Header></Header>
+      <div className='register-screen'>
+        <div className='register'>
+          <div className='register-container'>
             <Apresentation></Apresentation>
 
-            <div className='login-right-content'>
+            <div className='register-right-content'>
               <ToastContainer
                 position='top-right'
                 autoClose={4000}
@@ -53,7 +75,7 @@ export default function Login() {
               <ToastContainer />
 
               <div className='form-container'>
-                <h1>Login</h1>
+                <h1>Cadastre-se</h1>
                 <p>Nome</p>
                 <input
                   type='text'
@@ -74,16 +96,13 @@ export default function Login() {
                   }
                 />
 
-                <div className='login-buttons'>
-                  <button className='default-button' onClick={() => navigate(`/cadastro`)}>
-                    Cadastrar-se
+                <div className='register-buttons'>
+                  <button className='default-button' onClick={() => navigate(`/`)}>
+                    Login
                   </button>
 
-                  <button
-                    className='default-button'
-                    onClick={() => handleLogin(fields.userName, fields.password)}
-                  >
-                    Entrar
+                  <button className='default-button' onClick={() => registerUser()}>
+                    Cadastrar
                   </button>
                 </div>
               </div>
@@ -91,7 +110,7 @@ export default function Login() {
           </div>
         </div>
       </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </Fragment>
   )
 }

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import Register from '../components/Register'
-import Login from '../components/Login'
+import Register from '../components/Login/Register'
+import Login from '../components/Login/Login'
 import ProtectedRoutes from './ProtectedRoutes'
 import Tasks from '../components/Tasks/Tasks.tsx'
 
