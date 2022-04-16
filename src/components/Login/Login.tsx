@@ -13,16 +13,12 @@ interface IFields {
   password: string
 }
 
-
-
 export default function Login() {
   const [fields, setFields] = useState<IFields>({} as IFields)
 
   const navigate = useNavigate()
 
   const { authenticated, handleLogin } = useContext(AuthContext)
-  
-  
 
   useEffect(() => {
     if (authenticated) {
@@ -32,7 +28,7 @@ export default function Login() {
 
   return (
     <Fragment>
-        <Header></Header>
+      <Header></Header>
       <div className='login-screen'>
         <div className='login'>
           <div className='login-container'>
@@ -58,7 +54,6 @@ export default function Login() {
                 <input
                   type='text'
                   value={fields.userName}
-                  id='nameInput'
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setFields({ ...fields, userName: event.target.value })
                   }
@@ -68,7 +63,6 @@ export default function Login() {
                 <input
                   type='password'
                   value={fields.password}
-                  id='passwordInput'
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setFields({ ...fields, password: event.target.value })
                   }
@@ -91,7 +85,7 @@ export default function Login() {
           </div>
         </div>
       </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </Fragment>
   )
 }

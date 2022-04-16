@@ -15,7 +15,7 @@ export default function AppRoutes() {
   return (
 
     <Routes>
-      <Route exact path='/' element={<Login />} />
+      <Route index exact path='/' element={<Login />} />
       <Route exact path='/cadastro' element={<Register />} />
 
       <Route element={<ProtectedRoutes />}>
