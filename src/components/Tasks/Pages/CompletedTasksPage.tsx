@@ -1,12 +1,13 @@
-import { Fragment, useContext, useState, useEffect } from 'react'
-import Drawer from '../Body/Drawer'
-import Task from './Task'
-import { TasksContext } from '../context/TasksContext'
+import { Fragment, useState, useContext, useEffect } from 'react'
+import Drawer from '../../Body/Drawer'
+import Task from '../Task'
+import { TasksContext } from '../../context/TasksContext'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import AddTaskModal from './Modals/AddTaskModal'
-import NewToDoTasks from './New/Tasks/NewToDoTasks'
+import AddTaskModal from '../Modals/AddTaskModal'
+import ToDoTasksList from '../Lists/ToDoTasksList'
+import CompletedTasksList from '../Lists/CompletedTasksList'
 
 interface ITask {
   _id: string
@@ -15,7 +16,7 @@ interface ITask {
   situation: string
 }
 
-export default function ToDoTasks() {
+export default function CompletedTasksPage() {
   const { fetchTasks, tasks } = useContext(TasksContext)
 
   const [modalShow, setModalShow] = useState(false)
@@ -25,7 +26,6 @@ export default function ToDoTasks() {
   useEffect(() => {
     fetchTasks()
   }, [])
-
 
   function renderTasks() {
     if (tasks) {
@@ -39,10 +39,11 @@ export default function ToDoTasks() {
           />
 
           <div className='tasks-container'>
-            <NewToDoTasks
-              taskSituationType='A fazer'
+            <CompletedTasksList
+              setTaskSituation={setTaskSituation}
+              taskSituationType='Completa'
               setModalShow={setModalShow}
-            ></NewToDoTasks>
+            ></CompletedTasksList>
           </div>
         </Fragment>
       )
@@ -57,7 +58,7 @@ export default function ToDoTasks() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <h1>Tarefas A Fazer</h1>
+          <h1>Tarefas Completas</h1>
           <div className='tasks'>{renderTasks()}</div>
         </div>
       </div>

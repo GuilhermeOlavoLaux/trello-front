@@ -1,11 +1,11 @@
 import { Fragment, useState, useContext, useEffect } from 'react'
-import Drawer from '../Body/Drawer'
-import Task from './Task'
-import { TasksContext } from '../context/TasksContext'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import AddTaskModal from './Modals/AddTaskModal'
+import Drawer from '../../Body/Drawer'
+import Task from '../Task'
+import { TasksContext } from '../../context/TasksContext'
+import AddTaskModal from '../Modals/AddTaskModal'
+import ToDoTasksList from '../Lists/ToDoTasksList'
+import InProgressTasksList from '../Lists/InProgressTasksList'
+import CompletedTasksList from '../Lists/CompletedTasksList'
 
 interface ITask {
   _id: string
@@ -14,16 +14,19 @@ interface ITask {
   situation: string
 }
 
-export default function CompletedTasks() {
-  const { fetchTasks, tasks } = useContext(TasksContext)
-
+export default function AllTasksPage() {
   const [modalShow, setModalShow] = useState(false)
 
   const [taskSituation, setTaskSituation] = useState('')
 
+  const { tasks, setTasks, fetchTasks } = useContext(TasksContext)
+
   useEffect(() => {
+    setTasks([{}])
     fetchTasks()
-}, [])
+  }, [])
+
+  console.log(tasks)
 
   function separateTasks(taskSituationType: string) {
     const tasksMap = tasks.map((task: ITask) => {
@@ -57,23 +60,23 @@ export default function CompletedTasks() {
           />
 
           <div className='tasks-container'>
-            <div className='completed'>
-              <div className='completed-tittle'>
-                <h4>Completas</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('Completa')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
+            <ToDoTasksList
+              taskSituationType='A fazer'
+              setModalShow={setModalShow}
+              setTaskSituation={setTaskSituation}
+            ></ToDoTasksList>
 
-              <div className='completed-container'>{separateTasks('Completa')}</div>
-            </div>
+            <InProgressTasksList
+              taskSituationType='Em andamento'
+              setModalShow={setModalShow}
+              setTaskSituation={setTaskSituation}
+            ></InProgressTasksList>
+
+            <CompletedTasksList
+              taskSituationType='Completa'
+              setTaskSituation={setTaskSituation}
+              setModalShow={setModalShow}
+            ></CompletedTasksList>
           </div>
         </Fragment>
       )
@@ -88,7 +91,7 @@ export default function CompletedTasks() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <h1>Tarefas Completas</h1>
+          <h1>Suas tarefas</h1>
           <div className='tasks'>{renderTasks()}</div>
         </div>
       </div>

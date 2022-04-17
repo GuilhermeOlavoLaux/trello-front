@@ -1,9 +1,9 @@
 import { Fragment, useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import Task from '../../Task'
-import { api } from '../../../../api/apiRotes'
-import { TasksContext } from '../../../context/TasksContext'
+import Task from '../Task'
+import { api } from '../../../api/apiRotes'
+import { TasksContext } from '../../context/TasksContext'
 
 interface ITask {
   _id: string
@@ -14,13 +14,13 @@ interface ITask {
 
 interface IProps {
   taskSituationType: string
-  setModalShow: (value: boolean) => void;
+  setModalShow: (value: boolean) => void
+  setTaskSituation: (value: string) => void
 }
 
-export default function NewToDoTasks(props: IProps) {
+export default function ToDoTasksList(props: IProps) {
   const { fetchTasks, tasks } = useContext(TasksContext)
-  const [taskSituation, setTaskSituation] = useState('')
-  
+
   useEffect(() => {
     fetchTasks()
   }, [])
@@ -56,7 +56,7 @@ export default function NewToDoTasks(props: IProps) {
             className='plus-icon'
             onClick={() => {
               props.setModalShow(true)
-              setTaskSituation(props.taskSituationType)
+              props.setTaskSituation(props.taskSituationType)
             }}
           ></FontAwesomeIcon>
         </div>

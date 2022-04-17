@@ -1,8 +1,9 @@
 import { Fragment, useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import Task from '../../Task'
-import { TasksContext } from '../../../context/TasksContext'
+import Task from '../Task'
+import { api } from '../../../api/apiRotes'
+import { TasksContext } from '../../context/TasksContext'
 
 interface ITask {
   _id: string
@@ -14,12 +15,13 @@ interface ITask {
 interface IProps {
   taskSituationType: string
   setModalShow: (value: boolean) => void;
+  setTaskSituation: (value: string) => void;
+
 }
 
-export default function NewCompletedTasks(props: IProps) {
+export default function InProgressTasksList(props: IProps) {
   const { fetchTasks, tasks } = useContext(TasksContext)
-  const [taskSituation, setTaskSituation] = useState('')
-  
+
   useEffect(() => {
     fetchTasks()
   }, [])
@@ -44,9 +46,9 @@ export default function NewCompletedTasks(props: IProps) {
 
   return (
     <Fragment>
-      <div className='completed'>
-        <div className='completed-tittle'>
-          <h4>A fazer</h4>
+      <div className='in-progress'>
+        <div className='in-progress-tittle'>
+          <h4>A Fazer</h4>
 
           <FontAwesomeIcon
             icon={faPlus}
@@ -55,12 +57,12 @@ export default function NewCompletedTasks(props: IProps) {
             className='plus-icon'
             onClick={() => {
               props.setModalShow(true)
-              setTaskSituation(props.taskSituationType)
+              props.setTaskSituation(props.taskSituationType)
             }}
           ></FontAwesomeIcon>
         </div>
 
-        <div className='completed-container'>{separateTasks()}</div>
+        <div className='in-progress-container'>{separateTasks()}</div>
       </div>
     </Fragment>
   )
