@@ -11,6 +11,7 @@
     h1 {
       color: $white-text;
       margin-bottom: 26px;
+      margin-top: 15px;
     }
 
     .tasks {
@@ -128,8 +129,6 @@
     }
   }
 }
-
-
 
 @media (max-width: 400px) {
   .tasks-screen {

@@ -14,9 +14,8 @@ interface ITask {
 
 interface IProps {
   taskSituationType: string
-  setModalShow: (value: boolean) => void;
-  setTaskSituation: (value: string) => void;
-
+  setModalShow: (value: boolean) => void
+  setTaskSituation: (value: string) => void
 }
 
 export default function InProgressTasksList(props: IProps) {
@@ -46,7 +45,7 @@ export default function InProgressTasksList(props: IProps) {
 
   return (
     <Fragment>
-      <div className='in-progress'>
+      <div className='in-progress' >
         <div className='in-progress-tittle'>
           <h4>Em andamento</h4>
 

@@ -59,7 +59,7 @@ export default function InProgressTasksPage() {
         <Drawer></Drawer>
 
         <div className='tasks-screen-container'>
-          <h1>Tarefas Completas</h1>
+          <h1>Em andamento</h1>
           <div className='tasks'>{renderTasks()}</div>
         </div>
       </div>

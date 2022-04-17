@@ -58,7 +58,6 @@ export default function AllTasksPage() {
             situation={taskSituation}
             refreshTasks={fetchTasks}
           />
-
           <div className='tasks-container'>
             <ToDoTasksList
               taskSituationType='A fazer'
@@ -66,11 +65,14 @@ export default function AllTasksPage() {
               setTaskSituation={setTaskSituation}
             ></ToDoTasksList>
 
+            <div style={{ margin: '20px' }}></div>
+
             <InProgressTasksList
               taskSituationType='Em andamento'
               setModalShow={setModalShow}
               setTaskSituation={setTaskSituation}
             ></InProgressTasksList>
+            <div style={{ margin: '20px' }}></div>
 
             <CompletedTasksList
               taskSituationType='Completa'
