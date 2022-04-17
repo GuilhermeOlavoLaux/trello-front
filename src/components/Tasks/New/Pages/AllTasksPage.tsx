@@ -2,11 +2,9 @@ import { Fragment, useState, useContext, useEffect } from 'react'
 import Drawer from '../../../Body/Drawer'
 import Task from '../../Task'
 import { TasksContext } from '../../../context/TasksContext'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import AddTaskModal from '../../Modals/AddTaskModal'
 import NewToDoTasks from '../Tasks/NewToDoTasks'
+import NewInProgressTasks from '../Tasks/NewInProgressTasks'
 
 interface ITask {
   _id: string
@@ -15,7 +13,7 @@ interface ITask {
   situation: string
 }
 
-export default function NewTasksPage() {
+export default function AllTasksPage() {
   const [modalShow, setModalShow] = useState(false)
 
   const [taskSituation, setTaskSituation] = useState('')
@@ -59,47 +57,17 @@ export default function NewTasksPage() {
           />
 
           <div className='tasks-container'>
-            <NewToDoTasks
-              taskSituationType='A fazer'
+            <NewToDoTasks taskSituationType='A fazer' setModalShow={setModalShow}></NewToDoTasks>
+
+            <NewInProgressTasks
+              taskSituationType='Em andamento'
               setModalShow={setModalShow}
-              setTaskSituation={setTaskSituation}
-            ></NewToDoTasks>
+            ></NewInProgressTasks>
 
-            <div className='in-progress'>
-              <div className='in-progress-tittle'>
-                <h4>Em andamento</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('Em andamento')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
-
-              <div className='in-progress-container'>{separateTasks('Em andamento')}</div>
-            </div>
-
-            <div className='completed'>
-              <div className='completed-tittle'>
-                <h4>Completas</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('Completa')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
-
-              <div className='completed-container'>{separateTasks('Completa')}</div>
-            </div>
+            <NewInProgressTasks
+              taskSituationType='Completa'
+              setModalShow={setModalShow}
+            ></NewInProgressTasks>
           </div>
         </Fragment>
       )

@@ -17,10 +17,10 @@ interface IProps {
   setModalShow: (value: boolean) => void;
 }
 
-export default function NewToDoTasks(props: IProps) {
+export default function NewInProgressTasks(props: IProps) {
   const { fetchTasks, tasks } = useContext(TasksContext)
   const [taskSituation, setTaskSituation] = useState('')
-  
+
   useEffect(() => {
     fetchTasks()
   }, [])
@@ -45,8 +45,8 @@ export default function NewToDoTasks(props: IProps) {
 
   return (
     <Fragment>
-      <div className='to-do'>
-        <div className='to-do-tittle'>
+      <div className='in-progress'>
+        <div className='in-progress-tittle'>
           <h4>A fazer</h4>
 
           <FontAwesomeIcon
@@ -61,7 +61,7 @@ export default function NewToDoTasks(props: IProps) {
           ></FontAwesomeIcon>
         </div>
 
-        <div className='to-do-container'>{separateTasks()}</div>
+        <div className='in-progress-container'>{separateTasks()}</div>
       </div>
     </Fragment>
   )

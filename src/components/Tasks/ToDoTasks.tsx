@@ -6,6 +6,7 @@ import { TasksContext } from '../context/TasksContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import AddTaskModal from './Modals/AddTaskModal'
+import NewToDoTasks from './New/Tasks/NewToDoTasks'
 
 interface ITask {
   _id: string
@@ -23,27 +24,8 @@ export default function ToDoTasks() {
 
   useEffect(() => {
     fetchTasks()
-}, [])
+  }, [])
 
-  function separateTasks(taskSituationType: string) {
-    const tasksMap = tasks.map((task: ITask) => {
-      if (task.situation === taskSituationType) {
-        return (
-          <>
-            <Task
-              _id={task._id}
-              name={task.name}
-              description={task.description}
-              situation={task.situation}
-            ></Task>
-          </>
-        )
-      } else {
-        return null
-      }
-    })
-    return tasksMap
-  }
 
   function renderTasks() {
     if (tasks) {
@@ -57,23 +39,10 @@ export default function ToDoTasks() {
           />
 
           <div className='tasks-container'>
-            <div className='to-do'>
-              <div className='to-do-tittle'>
-                <h4>A fazer</h4>
-                <FontAwesomeIcon
-                  icon={faPlus}
-                  size='lg'
-                  color='black'
-                  className='plus-icon'
-                  onClick={() => {
-                    setModalShow(true)
-                    setTaskSituation('A fazer')
-                  }}
-                ></FontAwesomeIcon>
-              </div>
-
-              <div className='to-do-container'>{separateTasks('A fazer')}</div>
-            </div>
+            <NewToDoTasks
+              taskSituationType='A fazer'
+              setModalShow={setModalShow}
+            ></NewToDoTasks>
           </div>
         </Fragment>
       )

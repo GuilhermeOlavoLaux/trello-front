@@ -2,7 +2,6 @@ import { Fragment, useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Task from '../../Task'
-import { api } from '../../../../api/apiRotes'
 import { TasksContext } from '../../../context/TasksContext'
 
 interface ITask {
@@ -17,7 +16,7 @@ interface IProps {
   setModalShow: (value: boolean) => void;
 }
 
-export default function NewToDoTasks(props: IProps) {
+export default function NewCompletedTasks(props: IProps) {
   const { fetchTasks, tasks } = useContext(TasksContext)
   const [taskSituation, setTaskSituation] = useState('')
   
@@ -45,8 +44,8 @@ export default function NewToDoTasks(props: IProps) {
 
   return (
     <Fragment>
-      <div className='to-do'>
-        <div className='to-do-tittle'>
+      <div className='completed'>
+        <div className='completed-tittle'>
           <h4>A fazer</h4>
 
           <FontAwesomeIcon
@@ -61,7 +60,7 @@ export default function NewToDoTasks(props: IProps) {
           ></FontAwesomeIcon>
         </div>
 
-        <div className='to-do-container'>{separateTasks()}</div>
+        <div className='completed-container'>{separateTasks()}</div>
       </div>
     </Fragment>
   )
