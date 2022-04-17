@@ -6,7 +6,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 
     h1 {
@@ -22,8 +21,8 @@
       background-color: $grey-100;
       border-radius: 6px;
       height: 85%;
-      width: 80%;
-      min-width: 1000px;
+      width: 94%;
+      overflow-x: auto;
 
       h1 {
         margin-top: 50px;
@@ -33,7 +32,6 @@
       .tasks-container {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
         height: 100%;
         .plus-icon {
@@ -44,6 +42,7 @@
           background-color: $grey-200;
           min-width: 300px;
           border-radius: 10px 10px 0px 0px;
+          margin: auto;
 
           .to-do-tittle {
             display: flex;
@@ -69,6 +68,7 @@
           background-color: $grey-200;
           border-radius: 10px 10px 0px 0px;
           min-width: 300px;
+          margin: auto;
 
           .in-progress-tittle {
             display: flex;
@@ -88,11 +88,14 @@
             overflow: overlay;
           }
         }
+
         .completed {
           height: 80%;
           background-color: $grey-200;
           border-radius: 10px 10px 0px 0px;
           min-width: 300px;
+          margin: auto;
+
           .completed-tittle {
             display: flex;
             background-color: $green-light;
@@ -112,6 +115,27 @@
             overflow: overlay;
           }
         }
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .tasks-screen {
+    .tasks-screen-container {
+      .tasks {
+        width: 96%;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .tasks-screen {
+    .tasks-screen-container {
+      .tasks {
+        width: 96%;
       }
     }
   }

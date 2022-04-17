@@ -48,7 +48,7 @@ export default function InProgressTasksList(props: IProps) {
     <Fragment>
       <div className='in-progress'>
         <div className='in-progress-tittle'>
-          <h4>A Fazer</h4>
+          <h4>Em andamento</h4>
 
           <FontAwesomeIcon
             icon={faPlus}

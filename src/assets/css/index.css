@@ -5,7 +5,7 @@
   border: none;
   border-radius: 6px;
   width: 9rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
 }
 
@@ -13,38 +13,60 @@
   cursor: pointer;
   background-color: #444444;
   color: #7ae30b;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .apresentation-content {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 40px;
   margin-left: 80px;
 }
+
 .apresentation-content p {
   width: 100%;
   text-align: justify;
 }
+
 .apresentation-content p a {
   color: #eee;
   text-decoration: none;
 }
+
 .apresentation-content .about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
+
 .apresentation-content .about-me p {
   text-align: initial;
 }
+
 .apresentation-content .about-me h3 {
   font-size: 1.4rem;
 }
+
 .apresentation-content .about-me img {
   border-radius: 50%;
   height: 150px;
@@ -53,90 +75,157 @@
 
 .register-screen {
   height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .register-screen .register {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .register-screen .register .register-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #eee;
   border: 2px solid #7ae30b;
   background-color: #141314;
   border-radius: 6px;
   height: 500px;
 }
+
 .register-screen .register .register-container .register-right-content {
   margin-right: 80px;
   width: 400px;
 }
+
 .register-screen .register .register-container .register-right-content .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .register-screen .register .register-container .register-right-content .form-container h1 {
   font-size: 50px;
 }
+
 .register-screen .register .register-container .register-right-content .form-container input {
   text-align: center;
   height: 20px;
   width: 300px;
 }
+
 .register-screen .register .register-container .register-right-content .form-container .register-buttons {
   margin-top: 60px;
 }
+
 .register-screen .register .register-container .register-right-content .form-container .register-buttons button:nth-child(2) {
   margin-left: 20px;
 }
 
 .login-screen {
   height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .login-screen .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .login-screen .login .login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #eee;
   border: 2px solid #7ae30b;
   background-color: #141314;
   border-radius: 6px;
   height: 500px;
 }
+
 .login-screen .login .login-container .login-right-content {
   margin-right: 80px;
   width: 400px;
 }
+
 .login-screen .login .login-container .login-right-content .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .login-screen .login .login-container .login-right-content .form-container h1 {
   font-size: 50px;
 }
+
 .login-screen .login .login-container .login-right-content .form-container input {
   text-align: center;
   height: 20px;
   width: 300px;
 }
+
 .login-screen .login .login-container .login-right-content .form-container .login-buttons {
   margin-top: 60px;
 }
+
 .login-screen .login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
   margin-left: 20px;
 }
@@ -145,15 +234,23 @@
   background-color: #141314;
   color: #eee;
 }
+
 .footer .footer-container {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .footer .footer-container .footer-links a {
   margin-right: 20px;
 }
+
 .footer .footer-container img {
   height: 40px;
 }
@@ -161,20 +258,33 @@
 .header {
   background-color: #141314;
 }
+
 .header .header-container {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .header .header-container img {
   width: 150px;
 }
+
 .header .header-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
+
 .header .header-container li {
   color: #eee;
   padding-right: 20px;
@@ -187,24 +297,28 @@
   width: 280px;
   background-color: #444444;
 }
+
 .drawerOpen .burguer-icon {
   position: absolute;
   top: 20px;
   right: 10px;
   cursor: pointer;
 }
+
 .drawerOpen img {
   margin-top: 80px;
   margin-bottom: 60px;
   width: 150px;
   padding-left: 20px;
 }
+
 .drawerOpen ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
   color: #eee;
 }
+
 .drawerOpen li {
   cursor: pointer;
   padding-bottom: 10px;
@@ -214,45 +328,64 @@
 
 .drawerClosed {
   height: 80vh;
+  position: absolute;
 }
+
 .drawerClosed .burguer-icon {
   margin: 20px;
   color: #7ae30b;
   cursor: pointer;
 }
+
 .drawerClosed img {
   display: none;
 }
+
 .drawerClosed ul {
   display: none;
+}
+
+@media (max-width: 1100px) {
+  .drawerOpen {
+    position: absolute;
+  }
 }
 
 .add-task-modal {
   background-color: #141314;
 }
+
 .add-task-modal .add-task-container {
   position: relative;
   height: 500px;
   border: solid #7ae30b 2px;
   border-radius: 6px;
 }
+
 .add-task-modal .add-task-container h1 {
   color: #7ae30b;
   color: #eee;
   padding-left: 20px;
   padding-top: 20px;
 }
+
 .add-task-modal .add-task-container .id-input-container {
   margin-top: 60px;
   margin-left: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .add-task-modal .add-task-container .id-input-container p {
   padding-right: 48px;
   color: #eee;
   width: 100px;
 }
+
 .add-task-modal .add-task-container .id-input-container input {
   background-color: #444444;
   color: #eee;
@@ -262,16 +395,23 @@
   padding: 10px;
   width: 300px;
 }
+
 .add-task-modal .add-task-container .name-input-container {
   margin-top: 20px;
   margin-left: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .add-task-modal .add-task-container .name-input-container p {
   color: #eee;
   width: 100px;
 }
+
 .add-task-modal .add-task-container .name-input-container input {
   background-color: #444444;
   color: #eee;
@@ -281,16 +421,23 @@
   padding: 10px;
   width: 300px;
 }
+
 .add-task-modal .add-task-container .description-input-container {
   margin-top: 20px;
   margin-left: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .add-task-modal .add-task-container .description-input-container p {
   color: #eee;
   width: 100px;
 }
+
 .add-task-modal .add-task-container .description-input-container textarea {
   margin-top: 5px;
   padding: 10px;
@@ -302,12 +449,16 @@
   border: none;
   resize: none;
 }
+
 .add-task-modal .add-task-container .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 130px;
   margin-left: 160px;
   margin-right: 20px;
 }
+
 .add-task-modal .add-task-container .buttons-container button {
   background-color: #7ae30b;
   color: #141314;
@@ -315,28 +466,36 @@
   border: none;
   border-radius: 6px;
   width: 9rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   margin-left: 20px;
 }
+
 .add-task-modal .add-task-container .buttons-container :hover {
   cursor: pointer;
   background-color: #444444;
   color: #7ae30b;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 300px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #444444;
   border-top: 2px solid #141314;
   height: 80px;
   cursor: pointer;
 }
+
 .task h3 {
   width: 100px;
   height: 22px;
@@ -344,29 +503,42 @@
   font-size: 22px;
   text-overflow: ellipsis;
 }
+
 .task .task-controllers .icon {
   margin-left: 10px;
   cursor: pointer;
 }
+
 .task .task-controllers.icon:nth-child(1) {
   margin-left: 0px;
 }
 
 .tasks-screen {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .tasks-screen .tasks-screen-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .tasks-screen .tasks-screen-container h1 {
   color: #eee;
   margin-bottom: 26px;
 }
+
 .tasks-screen .tasks-screen-container .tasks {
   color: #eee;
   overflow: hidden;
@@ -375,96 +547,148 @@
   background-color: #141314;
   border-radius: 6px;
   height: 85%;
-  width: 80%;
-  min-width: 1000px;
+  width: 94%;
+  overflow-x: auto;
 }
+
 .tasks-screen .tasks-screen-container .tasks h1 {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .plus-icon {
   cursor: pointer;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do {
   height: 80%;
   background-color: #444444;
   min-width: 300px;
   border-radius: 10px 10px 0px 0px;
+  margin: auto;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #7ae30b;
   border-radius: 10px 10px 0px 0px;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 5px 0px 5px;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-tittle h4 {
   margin: 4px;
   padding-bottom: 5px;
   color: black;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .to-do .to-do-container {
   height: 100%;
   overflow: overlay;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress {
   height: 80%;
   background-color: #444444;
   border-radius: 10px 10px 0px 0px;
   min-width: 300px;
+  margin: auto;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #7ae30b;
   border-radius: 10px 10px 0px 0px;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 5px 0px 5px;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-tittle h4 {
   margin: 4px;
   padding-bottom: 5px;
   color: black;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .in-progress .in-progress-container {
   height: 100%;
   overflow: overlay;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed {
   height: 80%;
   background-color: #444444;
   border-radius: 10px 10px 0px 0px;
   min-width: 300px;
+  margin: auto;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #7ae30b;
   border-radius: 10px 10px 0px 0px;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 5px 0px 5px;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-tittle h4 {
   margin: 4px;
   padding-bottom: 5px;
   color: black;
 }
+
 .tasks-screen .tasks-screen-container .tasks .tasks-container .completed .completed-container {
   height: 100%;
   overflow: overlay;
 }
 
+@media (max-width: 1100px) {
+  .tasks-screen .tasks-screen-container .tasks {
+    width: 96%;
+  }
+}
+
+@media (max-width: 400px) {
+  .tasks-screen .tasks-screen-container .tasks {
+    width: 96%;
+  }
+}
+
 .view-task-modal {
   background-color: #141314;
 }
+
 .view-task-modal .view-task-container {
   position: relative;
   height: 500px;
@@ -472,6 +696,7 @@
   border-radius: 6px;
   color: #eee;
 }
+
 .view-task-modal .view-task-container h1 {
   margin: 30px 20px 10px 30px;
   word-break: break-all;
@@ -479,10 +704,12 @@
   max-height: 100px;
   overflow: auto;
 }
+
 .view-task-modal .view-task-container h4 {
   margin-left: 30px;
   margin-top: 30px;
 }
+
 .view-task-modal .view-task-container .description-container {
   width: 400px;
   overflow: auto;
@@ -490,15 +717,22 @@
   word-break: break-all;
   margin-left: 30px;
 }
+
 .view-task-modal .view-task-container .situation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
 }
+
 .view-task-modal .view-task-container .situation-container h4 {
   margin: 0px;
   margin-left: 30px;
 }
+
 .view-task-modal .view-task-container .situation-container p {
   margin: 0px;
   margin-left: 30px;
@@ -508,12 +742,14 @@
   background-color: #141314;
   border: 0px;
 }
+
 .edit-task-header h1 {
   color: #eee;
   max-width: 600px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .edit-task-header button {
   background-color: #7ae30b;
 }
@@ -521,6 +757,7 @@
 .edit-task-modal {
   background-color: #141314;
 }
+
 .edit-task-modal .edit-task-container {
   position: relative;
   height: 500px;
@@ -529,15 +766,18 @@
   padding-left: 20px;
   padding-top: 20px;
 }
+
 .edit-task-modal .edit-task-container h1 {
   color: #7ae30b;
   color: #eee;
 }
+
 .edit-task-modal .edit-task-container h4 {
   margin-top: 40px;
   color: #7ae30b;
   color: #eee;
 }
+
 .edit-task-modal .edit-task-container input {
   background-color: #444444;
   color: #eee;
@@ -545,6 +785,7 @@
   width: 350px;
   padding: 10px;
 }
+
 .edit-task-modal .edit-task-container textarea {
   background-color: #444444;
   color: #eee;
@@ -564,6 +805,7 @@
   background-color: #141314;
   border: 0px;
 }
+
 .delete-task-header button {
   background-color: #7ae30b;
 }
@@ -571,27 +813,46 @@
 .delete-task-modal {
   background-color: #141314;
 }
+
 .delete-task-modal .delete-task-container {
   height: 500px;
   border: solid #7ae30b 2px;
   border-radius: 6px;
   padding-left: 20px;
   padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .delete-task-modal .delete-task-container h4 {
   color: #eee;
   text-align: center;
 }
+
 .delete-task-modal .delete-task-container .buttons-container {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .delete-task-modal .delete-task-container .buttons-container button:nth-child(2) {
   margin-left: 20px;
 }
@@ -603,43 +864,73 @@
 
 .edit-profile-screen {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .edit-profile-screen .edit-profile-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .edit-profile-screen .edit-profile-container .edit-profile-background {
   color: #eee;
   overflow: hidden;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid #7ae30b;
   background-color: #141314;
   border-radius: 6px;
   height: 85%;
   width: 80%;
-  min-width: 1000px;
 }
+
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
 }
+
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields p {
   margin-top: 20px;
   color: #eee;
   text-align: center;
 }
+
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields button {
   margin-top: 100px;
 }
+
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields input {
   width: 300px;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

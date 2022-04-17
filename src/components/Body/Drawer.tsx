@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
 export default function Drawer() {
-  const [drawerFlag, setDrawerFlag] = useState(true)
+  const [drawerFlag, setDrawerFlag] = useState(false)
 
   const navigate = useNavigate()
 

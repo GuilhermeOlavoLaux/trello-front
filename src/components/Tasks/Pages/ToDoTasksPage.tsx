@@ -40,11 +40,11 @@ export default function ToDoTasksPage() {
           />
 
           <div className='tasks-container'>
-            <InProgressTasksList
+            <ToDoTasksList
               setTaskSituation={setTaskSituation}
-              taskSituationType='A Fazer'
+              taskSituationType='A fazer'
               setModalShow={setModalShow}
-            ></InProgressTasksList>
+            ></ToDoTasksList>
           </div>
         </Fragment>
       )
