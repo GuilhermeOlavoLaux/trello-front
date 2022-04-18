@@ -210,6 +210,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 80px;
 }
 
 .login-screen .login {
@@ -286,6 +287,9 @@
 }
 
 @media (max-width: 900px) {
+  .login-screen {
+    height: auto;
+  }
   .login-screen .login .login-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
