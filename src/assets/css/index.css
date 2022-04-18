@@ -151,8 +151,7 @@
 
 .register-screen .register .register-container .register-right-content .form-container input {
   text-align: center;
-  height: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .register-screen .register .register-container .register-right-content .form-container .register-buttons {
@@ -272,7 +271,7 @@
 
 .login-screen .login .login-container .login-right-content .form-container input {
   text-align: center;
-  height: 20px;
+  width: 80%;
 }
 
 .login-screen .login .login-container .login-right-content .form-container .login-buttons {
