@@ -210,7 +210,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 80px;
+  margin: 20px;
 }
 
 .login-screen .login {
