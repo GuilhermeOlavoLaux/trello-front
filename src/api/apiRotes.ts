@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3030/'
+  baseURL: 'https://trello-back-deploy-jmfiuj93c-guilhermeolavolaux.vercel.app/'
 })
 
 export { api }
