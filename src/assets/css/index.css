@@ -128,8 +128,8 @@
 }
 
 .register-screen .register .register-container .register-right-content {
-  margin-right: 80px;
   width: 50%;
+  margin-right: 0px;
 }
 
 .register-screen .register .register-container .register-right-content .form-container {
