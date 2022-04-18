@@ -6,11 +6,12 @@
   flex-direction: column;
 
   margin-right: 40px;
-  margin-left: 80px;
+  margin-left: 40px;
 
   p {
     width: 100%;
     text-align: justify;
+    margin-top: 10px;
 
     a {
       color: $white-text;
@@ -36,6 +37,18 @@
       border-radius: 50%;
       height: 150px;
       margin-right: 40px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 900px) {
+  .apresentation-content {
+    width: 85%;
+    .about-me {
+      display: none;
     }
   }
 }

@@ -75,7 +75,7 @@ export default function Register() {
               <ToastContainer />
 
               <div className='form-container'>
-                <h1>Cadastre-se</h1>
+                <h1>Cadastro</h1>
                 <p>Nome</p>
                 <input
                   type='text'

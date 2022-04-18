@@ -37,7 +37,21 @@
         }
 
         input {
-          width: 80%;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .edit-profile-screen {
+    .edit-profile-container {
+      .edit-profile-background {
+        .edit-profile-fields {
+          input {
+            width: 80%;
+          }
         }
       }
     }

@@ -5,24 +5,30 @@
   justify-content: center;
 
   .login {
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 
     .login-container {
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 80%;
       color: $white-text;
 
       border: 2px solid $green-light;
       background-color: $grey-100;
       border-radius: 6px;
-      height: 500px;
+
+      .apresentation-content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
       .login-right-content {
-        margin-right: 80px;
-        width: 400px;
+        margin-right: 20px;
         .form-container {
           display: flex;
           flex-direction: column;
@@ -35,15 +41,44 @@
           input {
             text-align: center;
             height: 20px;
-            width: 300px;
           }
 
           .login-buttons {
+            display: flex;
             margin-top: 60px;
           }
 
           .login-buttons button:nth-child(2) {
             margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .login-screen {
+    .login {
+      .login-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 94%;
+
+        .login-right-content {
+          margin-right: 0px;
+          .form-container {
+            h1 {
+              font-size: 30px;
+            }
+            .login-buttons {
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+            .login-buttons button:nth-child(2) {
+              margin-left: 5px;
+            }
           }
         }
       }

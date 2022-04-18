@@ -39,7 +39,6 @@
     .name-input-container {
       margin-top: 20px;
       margin-left: 20px;
-      align-items: center;
       display: flex;
 
       p {
@@ -55,6 +54,7 @@
         height: 30px;
         padding: 10px;
         width: 80%;
+        margin-right: 20px;
       }
     }
 
@@ -77,14 +77,15 @@
         border-radius: 10px;
         border: none;
         resize: none;
+        margin-right: 20px;
       }
     }
 
     .buttons-container {
       display: flex;
-
       margin-top: 130px;
-      margin-left: 160px;
+      align-items: center;
+      justify-content: end;
       margin-right: 20px;
 
       button {

@@ -33,12 +33,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 40px;
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 .apresentation-content p {
   width: 100%;
   text-align: justify;
+  margin-top: 10px;
 }
 
 .apresentation-content p a {
@@ -73,15 +74,23 @@
   margin-right: 40px;
 }
 
+@media (max-width: 900px) {
+  .apresentation-content {
+    width: 85%;
+  }
+  .apresentation-content .about-me {
+    display: none;
+  }
+}
+
 .register-screen {
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -97,6 +106,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 10px;
+  height: 86%;
 }
 
 .register-screen .register .register-container {
@@ -110,15 +121,15 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: #eee;
+  height: 100%;
   border: 2px solid #7ae30b;
   background-color: #141314;
   border-radius: 6px;
-  height: 500px;
 }
 
 .register-screen .register .register-container .register-right-content {
   margin-right: 80px;
-  width: 400px;
+  width: 50%;
 }
 
 .register-screen .register .register-container .register-right-content .form-container {
@@ -141,15 +152,52 @@
 .register-screen .register .register-container .register-right-content .form-container input {
   text-align: center;
   height: 20px;
-  width: 300px;
+  width: 100%;
 }
 
 .register-screen .register .register-container .register-right-content .form-container .register-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 60px;
 }
 
 .register-screen .register .register-container .register-right-content .form-container .register-buttons button:nth-child(2) {
   margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .register-screen .register {
+    height: 96%;
+  }
+  .register-screen .register .register-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .register-screen .register .register-container .register-right-content {
+    margin-right: 0px;
+  }
+  .register-screen .register .register-container .register-right-content .form-container h1 {
+    font-size: 30px;
+  }
+  .register-screen .register .register-container .register-right-content .form-container input {
+    text-align: center;
+  }
+  .register-screen .register .register-container .register-right-content .form-container .register-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .register-screen .register .register-container .register-right-content .form-container .register-buttons button:nth-child(2) {
+    margin-left: 5px;
+  }
 }
 
 .login-screen {
@@ -166,6 +214,7 @@
 }
 
 .login-screen .login {
+  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +224,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
 }
 
 .login-screen .login .login-container {
@@ -187,16 +237,20 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 80%;
   color: #eee;
   border: 2px solid #7ae30b;
   background-color: #141314;
   border-radius: 6px;
-  height: 500px;
+}
+
+.login-screen .login .login-container .apresentation-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .login-screen .login .login-container .login-right-content {
-  margin-right: 80px;
-  width: 400px;
+  margin-right: 20px;
 }
 
 .login-screen .login .login-container .login-right-content .form-container {
@@ -219,15 +273,46 @@
 .login-screen .login .login-container .login-right-content .form-container input {
   text-align: center;
   height: 20px;
-  width: 300px;
 }
 
 .login-screen .login .login-container .login-right-content .form-container .login-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 60px;
 }
 
 .login-screen .login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
   margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .login-screen .login .login-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 94%;
+  }
+  .login-screen .login .login-container .login-right-content {
+    margin-right: 0px;
+  }
+  .login-screen .login .login-container .login-right-content .form-container h1 {
+    font-size: 30px;
+  }
+  .login-screen .login .login-container .login-right-content .form-container .login-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .login-screen .login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
+    margin-left: 5px;
+  }
 }
 
 .footer {
@@ -283,12 +368,19 @@
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  margin: 0px;
 }
 
 .header .header-container li {
   color: #eee;
   padding-right: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .header .header-container img {
+    width: 90px;
+  }
 }
 
 .drawerOpen {
@@ -399,9 +491,6 @@
 .add-task-modal .add-task-container .name-input-container {
   margin-top: 20px;
   margin-left: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,6 +509,7 @@
   height: 30px;
   padding: 10px;
   width: 80%;
+  margin-right: 20px;
 }
 
 .add-task-modal .add-task-container .description-input-container {
@@ -448,6 +538,7 @@
   border-radius: 10px;
   border: none;
   resize: none;
+  margin-right: 20px;
 }
 
 .add-task-modal .add-task-container .buttons-container {
@@ -455,7 +546,12 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 130px;
-  margin-left: 160px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   margin-right: 20px;
 }
 
@@ -938,6 +1034,12 @@
 }
 
 .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields input {
-  width: 80%;
+  width: 40%;
+}
+
+@media (max-width: 780px) {
+  .edit-profile-screen .edit-profile-container .edit-profile-background .edit-profile-fields input {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

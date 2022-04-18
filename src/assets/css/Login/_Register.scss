@@ -1,26 +1,29 @@
 .register-screen {
   height: 80vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   .register {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
+    height: 86%;
 
     .register-container {
       display: flex;
       align-items: center;
       justify-content: center;
       color: $white-text;
-
+      height: 100%;
       border: 2px solid $green-light;
       background-color: $grey-100;
       border-radius: 6px;
-      height: 500px;
+
       .register-right-content {
         margin-right: 80px;
-        width: 400px;
+        width: 50%;
+
         .form-container {
           display: flex;
           flex-direction: column;
@@ -33,10 +36,11 @@
           input {
             text-align: center;
             height: 20px;
-            width: 300px;
+            width: 100%;
           }
 
           .register-buttons {
+            display: flex;
             margin-top: 60px;
           }
 
@@ -48,3 +52,39 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .register-screen {
+    .register {
+      height: 96%;
+      .register-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .register-right-content {
+          margin-right: 0px;
+          .form-container {
+            h1 {
+              font-size: 30px;
+            }
+
+            input {
+              text-align: center;
+            }
+
+            .register-buttons {
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+
+            .register-buttons button:nth-child(2) {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
