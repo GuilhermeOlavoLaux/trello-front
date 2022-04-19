@@ -210,7 +210,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px;
 }
 
 .login-screen .login {
@@ -280,6 +279,8 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .login-screen .login .login-container .login-right-content .form-container .login-buttons button:nth-child(2) {
@@ -288,7 +289,8 @@
 
 @media (max-width: 900px) {
   .login-screen {
-    height: auto;
+    height: 100vh;
+    margin: 20px;
   }
   .login-screen .login .login-container {
     -webkit-box-orient: vertical;

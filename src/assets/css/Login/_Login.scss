@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
 
   .login {
     margin: 20px;
@@ -46,6 +45,8 @@
           .login-buttons {
             display: flex;
             margin-top: 60px;
+            margin-left: 5px;
+            margin-right: 5px;
           }
 
           .login-buttons button:nth-child(2) {
@@ -59,7 +60,10 @@
 
 @media (max-width: 900px) {
   .login-screen {
-    height: auto;
+    height: 100vh;
+
+    margin: 20px;
+
     .login {
       .login-container {
         flex-direction: column;
