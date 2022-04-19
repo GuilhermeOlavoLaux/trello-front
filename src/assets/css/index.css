@@ -166,6 +166,10 @@
 }
 
 @media (max-width: 900px) {
+  .register-screen {
+    height: 100vh;
+    margin: 20px;
+  }
   .register-screen .register {
     height: 96%;
   }
