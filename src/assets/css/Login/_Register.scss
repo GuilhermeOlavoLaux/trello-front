@@ -52,6 +52,25 @@
   }
 }
 
+@media (max-width: 420px) {
+  .register-screen {
+    .register {
+      .register-container {
+        .register-right-content {
+          .register-buttons {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+
+          .register-buttons button:nth-child(2) {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .register-screen {
     height: 100vh;
@@ -63,6 +82,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
         .register-right-content {
           margin-right: 0px;
           .form-container {
@@ -72,6 +92,7 @@
 
             input {
               text-align: center;
+              width: 100%;
             }
 
             .register-buttons {

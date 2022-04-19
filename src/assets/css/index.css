@@ -165,6 +165,16 @@
   margin-left: 20px;
 }
 
+@media (max-width: 420px) {
+  .register-screen .register .register-container .register-right-content .register-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .register-screen .register .register-container .register-right-content .register-buttons button:nth-child(2) {
+    margin-left: 5px;
+  }
+}
+
 @media (max-width: 900px) {
   .register-screen {
     height: 100vh;
@@ -184,6 +194,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .register-screen .register .register-container .register-right-content {
     margin-right: 0px;
@@ -193,6 +204,7 @@
   }
   .register-screen .register .register-container .register-right-content .form-container input {
     text-align: center;
+    width: 100%;
   }
   .register-screen .register .register-container .register-right-content .form-container .register-buttons {
     margin-top: 20px;
@@ -450,6 +462,18 @@
   .drawerOpen {
     position: absolute;
   }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  height: 100%;
 }
 
 .add-task-modal {
