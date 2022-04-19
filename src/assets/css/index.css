@@ -305,7 +305,7 @@
 
 @media (max-width: 900px) {
   .login-screen {
-    height: 100vh;
+    height: auto;
     margin: 20px;
   }
   .login-screen .login .login-container {
